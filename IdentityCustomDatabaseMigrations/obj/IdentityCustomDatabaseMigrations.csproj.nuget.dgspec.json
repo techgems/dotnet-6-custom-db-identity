@@ -1,0 +1,92 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Carlos.Jimenez\\Desktop\\Carlos\\identity-custom-database\\IdentityCustomDatabase\\IdentityCustomDatabaseMigrations\\IdentityCustomDatabaseMigrations.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Carlos.Jimenez\\Desktop\\Carlos\\identity-custom-database\\IdentityCustomDatabase\\IdentityCustomDatabaseMigrations\\IdentityCustomDatabaseMigrations.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Carlos.Jimenez\\Desktop\\Carlos\\identity-custom-database\\IdentityCustomDatabase\\IdentityCustomDatabaseMigrations\\IdentityCustomDatabaseMigrations.csproj",
+        "projectName": "IdentityCustomDatabaseMigrations",
+        "projectPath": "C:\\Users\\Carlos.Jimenez\\Desktop\\Carlos\\identity-custom-database\\IdentityCustomDatabase\\IdentityCustomDatabaseMigrations\\IdentityCustomDatabaseMigrations.csproj",
+        "packagesPath": "C:\\Users\\Carlos.Jimenez\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Carlos.Jimenez\\Desktop\\Carlos\\identity-custom-database\\IdentityCustomDatabase\\IdentityCustomDatabaseMigrations\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Carlos.Jimenez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FluentMigrator": {
+              "target": "Package",
+              "version": "[3.3.2, )"
+            },
+            "FluentMigrator.Runner": {
+              "target": "Package",
+              "version": "[3.3.2, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration.CommandLine": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.EnvironmentVariables": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.UserSecrets": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.106\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "34f528fd-4cc4-430a-8233-ab50f7c4ae4f": {
+      "ProjectGuid": "34f528fd-4cc4-430a-8233-ab50f7c4ae4f",
+      "DisplayName": "IdentityCustomDatabase",
+      "ColorIndex": 0
+    },
+    "735e96bc-1b3a-458f-b93c-430b92e7a7c5": {
+      "ProjectGuid": "735e96bc-1b3a-458f-b93c-430b92e7a7c5",
+      "DisplayName": "IdentityCustomDatabaseDataAccess",
+      "ColorIndex": 1
+    },
+    "45c16862-c4d7-4177-8b33-5a8e1aad9356": {
+      "ProjectGuid": "45c16862-c4d7-4177-8b33-5a8e1aad9356",
+      "DisplayName": "IdentityCustomDatabaseMigrations",
+      "ColorIndex": 2
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 3
+}

@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityCustomDatabase", "IdentityCustomDatabase\IdentityCustomDatabase.csproj", "{34F528FD-4CC4-430A-8233-AB50F7C4AE4F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{E0A2DD2C-B25F-4D8E-8F92-6E69D4517E16}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Migrations", "Migrations", "{AFCA4BEF-337F-428C-8C34-DB666609D908}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityCustomDatabaseDataAccess", "IdentityCustomDatabaseDataAccess\IdentityCustomDatabaseDataAccess.csproj", "{735E96BC-1B3A-458F-B93C-430B92E7A7C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityCustomDatabaseMigrations", "IdentityCustomDatabaseMigrations\IdentityCustomDatabaseMigrations.csproj", "{45C16862-C4D7-4177-8B33-5A8E1AAD9356}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34F528FD-4CC4-430A-8233-AB50F7C4AE4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34F528FD-4CC4-430A-8233-AB50F7C4AE4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34F528FD-4CC4-430A-8233-AB50F7C4AE4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34F528FD-4CC4-430A-8233-AB50F7C4AE4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{735E96BC-1B3A-458F-B93C-430B92E7A7C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{735E96BC-1B3A-458F-B93C-430B92E7A7C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{735E96BC-1B3A-458F-B93C-430B92E7A7C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{735E96BC-1B3A-458F-B93C-430B92E7A7C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45C16862-C4D7-4177-8B33-5A8E1AAD9356}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45C16862-C4D7-4177-8B33-5A8E1AAD9356}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45C16862-C4D7-4177-8B33-5A8E1AAD9356}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45C16862-C4D7-4177-8B33-5A8E1AAD9356}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{34F528FD-4CC4-430A-8233-AB50F7C4AE4F} = {E0A2DD2C-B25F-4D8E-8F92-6E69D4517E16}
+		{735E96BC-1B3A-458F-B93C-430B92E7A7C5} = {E0A2DD2C-B25F-4D8E-8F92-6E69D4517E16}
+		{45C16862-C4D7-4177-8B33-5A8E1AAD9356} = {AFCA4BEF-337F-428C-8C34-DB666609D908}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E69E29D7-300F-4BF6-85F6-DAE09B6B96E8}
+	EndGlobalSection
+EndGlobal
