@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "AccessDenied";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet" />
+    <link href="~/css/tailwind.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.5.1/cdn.min.js" defer></script>
+    <script src="~/js/WindmillUI/init-alpine.js"></script>
+</head>
+<body>
+    <div style="background-image: url('@Url.Content("~/img/imgAccessDenied.png")'); background-size: 100% 100%; ">
+        <div class="flex items-center min-h-screen">
+            <div class="flex-1 h-full max-w-2xl mx-auto overflow-hidden bg-white rounded-lg shadow-xl dark:bg-gray-800">
+                <div class="flex items-center justify-center p-6 sm:p-12">
+                    <div class="w-full">
+
+                        <div class="text-red-700 font-medium text-1xl">
+                            <div>
+                                <div class="flex justify-center">
+                                    <heroicon-outline icon="XCircle" class="h-24 w-24 text-red-600" stroke-width="1" />
+                                </div>
+                                <h2 class="text-2xl mb-4 text-gray-800 text-center font-bold">Access Denied</h2>
+                                <p class="mt-6 text-base text-red-700 text-center">
+                                    You do not have permission to view this page.
+                                </p>
+                                <hr class="my-8" />
+                                <a class="w-40 block mx-auto focus:outline-none py-2 px-5 rounded-lg shadow-sm text-center mt-3 text-base text-white bg-red-600 hover:bg-gray-1 font-medium border border-red-500 hover:border-red-600 hover:bg-red-700 "
+                                   asp-area="" asp-controller="Home" asp-action="Index">
+                                    Go Back
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

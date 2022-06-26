@@ -1,0 +1,62 @@
+﻿@using System.Collections.Generic
+@using System.Linq
+@using Microsoft.AspNetCore.Http
+@model LoginViewModel
+@{
+    Layout = "_AuthLayout";
+    ViewData["Title"] = "Log in";
+}
+
+<div>
+    <div class="flex flex-col overflow-y-auto md:flex-row">
+        <div class="hidden md:block md:h-auto md:w-1/2">
+            <img aria-hidden="true"
+                 class="object-cover w-full h-full dark:hidden"
+                 src="~/img/logoLeadDog.png"
+                 alt="Office" />
+            <img aria-hidden="true"
+                 class="hidden object-cover w-full h-full dark:block"
+                 src="~/img/logoLeadDog.png"
+                 alt="Office" />
+        </div>
+        <div class="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
+            <div class="w-full">
+                <form asp-controller="Auth" asp-action="Login">
+                    <h1 class="mb-4 text-xl font-semibold text-gray-700 dark:text-gray-200">
+                        Login
+                    </h1>
+                    <div class="mt-2 text-red-500 dark:text-red-500" asp-validation-summary="ModelOnly"></div>
+                    <label class="block mt-4 text-sm">
+                        <span class="block uppercase tracking-wide text-xs font-bold mb-2">Email</span>
+                        <input class="appearance-none block w-full border border-gray-300 rounded py-3 px-4 mb-2"
+                               asp-for="Email" type="text" />
+                        <span class="text-red-500 dark:text-red-500 text-sm" asp-validation-for="Email"></span>
+                    </label>
+                    <label class="block mt-4 text-sm">
+                        <span class="block uppercase tracking-wide text-xs font-bold mb-2">Password</span>
+                        <input class="appearance-none block w-full border border-gray-300 rounded py-3 px-4 mb-2"
+                               asp-for="Password" type="password" />
+                        <span class="text-red-500 dark:text-red-500 text-sm" asp-validation-for="Password"></span>
+                    </label>
+                    <button class="block w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-primary border border-transparent rounded-lg active:bg-primary hover:bg-primary focus:outline-none focus:ring-primary"
+                            type="submit">
+                        Log in
+                    </button>
+                </form>
+                <hr class="my-8" />
+                <p class="mt-4">
+                    <a class="text-sm font-medium text-primary dark:text-primary-light hover:underline"
+                       asp-area="" asp-controller="Auth" asp-action="ForgotPassword">
+                        Forgot your password?
+                    </a>
+                </p>
+                <p class="mt-1">
+                    <a class="text-sm font-medium text-primary dark:text-primary-light hover:underline"
+                       asp-area="" asp-controller="Auth" asp-action="Register">
+                        Request Access
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
