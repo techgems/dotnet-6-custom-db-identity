@@ -139,53 +139,53 @@ public class UserStore : IUserStore
         throw new NotImplementedException();
     }
 
-    public async Task SetEmailAsync(User user, string email, CancellationToken cancellationToken)
+    public Task SetEmailAsync(User user, string email, CancellationToken cancellationToken)
     {
         user.Email = email;
 
-        await _usersRepository.Update(user);
+        return Task.FromResult(0);
     }
 
-    public async Task SetEmailConfirmedAsync(User user, bool confirmed, CancellationToken cancellationToken)
+    public Task SetEmailConfirmedAsync(User user, bool confirmed, CancellationToken cancellationToken)
     {
         user.IsConfirmed = confirmed;
 
-        await _usersRepository.Update(user);
+        return Task.FromResult(0);
     }
 
-    public async Task SetNormalizedEmailAsync(User user, string normalizedEmail, CancellationToken cancellationToken)
+    public Task SetNormalizedEmailAsync(User user, string normalizedEmail, CancellationToken cancellationToken)
     {
         user.Email = normalizedEmail;
 
-        await _usersRepository.Update(user);
+        return Task.FromResult(0);
     }
 
-    public async Task SetNormalizedUserNameAsync(User user, string normalizedName, CancellationToken cancellationToken)
+    public Task SetNormalizedUserNameAsync(User user, string normalizedName, CancellationToken cancellationToken)
     {
         user.Email = normalizedName;
 
-        await _usersRepository.Update(user);
+        return Task.FromResult(0);
     }
 
-    public async Task SetPasswordHashAsync(User user, string passwordHash, CancellationToken cancellationToken)
+    public Task SetPasswordHashAsync(User user, string passwordHash, CancellationToken cancellationToken)
     {
         user.Password = passwordHash;
 
-        await _usersRepository.Update(user);
+        return Task.FromResult(0);
     }
 
-    public async Task SetSecurityStampAsync(User user, string stamp, CancellationToken cancellationToken)
+    public Task SetSecurityStampAsync(User user, string stamp, CancellationToken cancellationToken)
     {
         user.SecurityStamp = stamp;
 
-        await _usersRepository.Update(user);
+        return Task.FromResult(0);
     }
 
-    public async Task SetUserNameAsync(User user, string userName, CancellationToken cancellationToken)
+    public Task SetUserNameAsync(User user, string userName, CancellationToken cancellationToken)
     {
         user.Email = userName;
 
-        await _usersRepository.Update(user);
+        return Task.FromResult(0);
     }
 
     public async Task<IdentityResult> UpdateAsync(User user, CancellationToken cancellationToken)
