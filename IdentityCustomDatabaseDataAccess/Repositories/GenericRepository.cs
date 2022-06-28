@@ -18,7 +18,7 @@ namespace IdentityCustomDatabase.Repositories
         where KeyType : struct
     {
 
-        public GenericRepository(IConfiguration configuration) : base(configuration.GetConnectionString("LeadDog"))
+        public GenericRepository(IConfiguration configuration) : base(configuration.GetConnectionString("CustomIdentity"))
         {
         }
 

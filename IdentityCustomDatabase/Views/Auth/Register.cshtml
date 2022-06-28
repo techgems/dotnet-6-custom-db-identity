@@ -2,85 +2,40 @@
 
 @{
     ViewData["Title"] = "Register";
-    Layout = null;
+    Layout = "_AuthLayout";
 }
 
 
-<!DOCTYPE html>
-<html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"]</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet" />
-    <link href="~/css/tailwind.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.5.1/cdn.min.js" defer></script>
-    <script src="~/js/WindmillUI/init-alpine.js"></script>
-    <script src="~/js/InputMask/inputmask.min.js"></script>
-</head>
-<body class="bg-gray-100">
-    <div class="flex items-center min-h-screen">
-        <div class="flex-1 h-full max-w-4xl mx-auto overflow-hidden bg-gray-100 rounded-lg dark:bg-gray-800">
-            <a class="text-sm font-medium text-primary dark:text-primary-light hover:underline"
-               asp-area="" asp-controller="Auth" asp-action="Login">
-                &#x2190; Already have an account? Login
-            </a>
-
-            <div>
-                <div class="flex flex-col overflow-y-auto md:flex-row">
-                    <div class="flex items-center justify-center p-6 bg-gray-100">
-                        <div class="w-full">
-                            <form asp-controller="Auth" asp-action="Register">
-                                <div class="mt-10 sm:mt-0">
-                                    <div class="md:grid md:grid-cols-3 md:gap-6">
-                                        <div class="md:col-span-1">
-                                            <div class="px-4 sm:px-0">
-                                                <h3 class="text-lg font-medium leading-6 text-gray-900">Personal Information</h3>
-                                            </div>
-                                        </div>
-                                        <div class="mt-5 md:mt-0 md:col-span-2">
-                                            <div class="shadow overflow-hidden sm:rounded-md">
-                                                <div class="px-4 py-5 bg-white sm:p-6">
-                                                    <div class="grid grid-cols-6 gap-6">
-                                                        <div class="col-span-6 sm:col-span-3">
-                                                            <label asp-for="Email" class="block text-sm font-medium text-gray-700"></label>
-                                                            <input asp-for="Email" type="text" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
-                                                            <span class="tw-validation-error" asp-validation-for="Email"></span>
-                                                        </div>
-                                                        <div class="col-span-6 sm:col-span-3">
-                                                            <label asp-for="Password" class="block text-sm font-medium text-gray-700"></label>
-                                                            <input asp-for="Password" type="text" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
-                                                            <span class="tw-validation-error" asp-validation-for="Password"></span>
-                                                        </div>
-                                                        <div class="col-span-6 sm:col-span-3">
-                                                            <label asp-for="RepeatPassword" class="block text-sm font-medium text-gray-700"></label>
-                                                            <input asp-for="RepeatPassword" type="text" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
-                                                            <span class="tw-validation-error" asp-validation-for="RepeatPassword"></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="hidden sm:block" aria-hidden="true">
-                                    <div class="py-5">
-                                        <div class="border-t border-gray-200"></div>
-                                    </div>
-                                </div>
-                                <!-- You should use a button here, as the anchor is only used for the example  -->
-                                <button class="block w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-primary border border-transparent rounded-lg active:bg-primary hover:bg-primary focus:outline-none focus:ring-primary"
-                                        type="submit">
-                                    Create account
-                                </button>
-                            </form>
-                        </div>
-                    </div>
+<div class="w-full lg:w-6/12 px-4">
+    <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200 border-0">
+        <div class="flex-auto px-4 lg:px-10 py-10 pt-8">
+            <form asp-controller="Auth" asp-action="Register">
+                <div class="relative w-full mb-3">
+                    <label asp-for="Email" class="block uppercase text-blueGray-600 text-xs font-bold mb-2"></label>
+                    <input asp-for="Email" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="John.Bennet@mail.com" />
+                    <span asp-validation-for="Email" class=""></span>
                 </div>
-            </div>
+                <div class="relative w-full mb-3">
+                    <label asp-for="PreferredName" class="block uppercase text-blueGray-600 text-xs font-bold mb-2"></label>
+                    <input asp-for="PreferredName" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="John Bennet" />
+                    <span asp-validation-for="PreferredName" class=""></span>
+                </div>
+                <div class="relative w-full mb-3">
+                    <label asp-for="Password" class="block uppercase text-blueGray-600 text-xs font-bold mb-2"></label>
+                    <input asp-for="Password" type="password" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="Password" />
+                    <span asp-validation-for="Password" class=""></span>
+                </div>
+                <div class="relative w-full mb-3">
+                    <label asp-for="RepeatPassword" class="block uppercase text-blueGray-600 text-xs font-bold mb-2"></label>
+                    <input asp-for="RepeatPassword" type="password" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="Confirm your password" />
+                    <span asp-validation-for="RepeatPassword" class=""></span>
+                </div>
+                <div class="text-center mt-6">
+                    <button class="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150" type="button">
+                        Create Account
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
-</body>
-</html>
-
+</div>
