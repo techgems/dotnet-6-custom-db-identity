@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityCustomDatabase.Data
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityCustomDatabaseMigrations", "IdentityCustomDatabaseMigrations\IdentityCustomDatabaseMigrations.csproj", "{45C16862-C4D7-4177-8B33-5A8E1AAD9356}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityCustomDatabase.Shared", "IdentityCustomDatabase.Shared\IdentityCustomDatabase.Shared.csproj", "{215277E4-67E8-41C9-B4F2-BADB803173D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityCustomDatabase.Shared", "IdentityCustomDatabase.Shared\IdentityCustomDatabase.Shared.csproj", "{215277E4-67E8-41C9-B4F2-BADB803173D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

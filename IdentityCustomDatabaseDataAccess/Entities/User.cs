@@ -16,6 +16,8 @@ namespace IdentityCustomDatabaseDataAccess.Entities
 
         public DateTime? LastLogin { get; set; }
 
+        public bool IsConfirmed { get; set; }
+
         public DateTime CreateDate { get; set; }
 
         public Guid? InviteGuid { get; set; }

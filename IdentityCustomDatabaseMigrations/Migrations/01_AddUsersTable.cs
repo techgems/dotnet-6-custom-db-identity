@@ -32,6 +32,7 @@ public class AddUsersTable : Migration
             .WithColumn("SecurityStamp").AsString().NotNullable()
             .WithColumn("LastLogin").AsDateTime().Nullable()
             .WithColumn("CreateDate").AsDateTime().NotNullable()
+            .WithColumn("IsConfirmed").AsBoolean().NotNullable().WithDefaultValue(false)
             .WithColumn("InviteGuid").AsGuid().Nullable()
             .WithColumn("RoleId").AsInt32().NotNullable().ForeignKey("Roles", "Id");
 

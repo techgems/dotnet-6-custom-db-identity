@@ -1,4 +1,6 @@
-﻿using IdentityCustomDatabaseDataAccess.Entities;
+﻿using IdentityCustomDatabase.DataAccess.Repositories.Interfaces;
+using IdentityCustomDatabase.Repositories.Interfaces;
+using IdentityCustomDatabaseDataAccess.Entities;
 using IdentityCustomDatabaseDataAccess.Stores.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using System;
@@ -11,84 +13,108 @@ namespace IdentityCustomDatabaseDataAccess.Stores;
 
 public class UserStore : IUserStore
 {
+    private readonly IUsersRepository _usersRepository;
+    private readonly IClaimsRepository _claimsRepository;
+
+    public UserStore(IUsersRepository usersRepository, IClaimsRepository claimsRepository)
+    {
+        _usersRepository = usersRepository;
+        _claimsRepository = claimsRepository;
+    }
+
     public Task AddClaimsAsync(User user, IEnumerable<System.Security.Claims.Claim> claims, CancellationToken cancellationToken)
     {
         throw new NotImplementedException();
     }
 
-    public Task<IdentityResult> CreateAsync(User user, CancellationToken cancellationToken)
+    public async Task<IdentityResult> CreateAsync(User user, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        var userId = await _usersRepository.Create(user);
+
+        user.Id = userId;
+
+        return IdentityResult.Success;
     }
 
-    public Task<IdentityResult> DeleteAsync(User user, CancellationToken cancellationToken)
+    public async Task<IdentityResult> DeleteAsync(User user, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        var result = await _usersRepository.Delete(user);
+
+        return IdentityResult.Success;
     }
 
-    public void Dispose()
+    public async Task<User> FindByEmailAsync(string normalizedEmail, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        var user = await _usersRepository.FindByEmail(normalizedEmail);
+
+        return user;
     }
 
-    public Task<User> FindByEmailAsync(string normalizedEmail, CancellationToken cancellationToken)
+    public async Task<User> FindByIdAsync(string userId, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        var user = await _usersRepository.Get(Convert.ToInt32(userId));
+
+        return user;
     }
 
-    public Task<User> FindByIdAsync(string userId, CancellationToken cancellationToken)
+    public async Task<User> FindByNameAsync(string normalizedUserName, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        var user = await _usersRepository.FindByName(normalizedUserName);
+
+        return user;
     }
 
-    public Task<User> FindByNameAsync(string normalizedUserName, CancellationToken cancellationToken)
+    public async Task<IList<System.Security.Claims.Claim>> GetClaimsAsync(User user, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
-    }
+        var claims = await _claimsRepository.GetClaimsForUser(user.Id);
 
-    public Task<IList<System.Security.Claims.Claim>> GetClaimsAsync(User user, CancellationToken cancellationToken)
-    {
-        throw new NotImplementedException();
+        var securityClaims = new List<System.Security.Claims.Claim>();
+        foreach (var claim in claims)
+        {
+            //securityClaims.Add(new System.Security.Claims.Claim { })
+        }
+
+        return securityClaims;
     }
 
     public Task<string> GetEmailAsync(User user, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        return Task.FromResult(user.Email.ToString());
     }
 
     public Task<bool> GetEmailConfirmedAsync(User user, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        return Task.FromResult(user.IsConfirmed);
     }
 
     public Task<string> GetNormalizedEmailAsync(User user, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        return Task.FromResult(user.Email.ToUpperInvariant());
     }
 
     public Task<string> GetNormalizedUserNameAsync(User user, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        return Task.FromResult(user.Email.ToUpperInvariant());
     }
 
     public Task<string> GetPasswordHashAsync(User user, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        return Task.FromResult(user.Password);
     }
 
     public Task<string> GetSecurityStampAsync(User user, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        return Task.FromResult(user.SecurityStamp);
     }
 
     public Task<string> GetUserIdAsync(User user, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        return Task.FromResult(user.Id.ToString());
     }
 
     public Task<string> GetUserNameAsync(User user, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        return Task.FromResult(user.Email.ToString());
     }
 
     public Task<IList<User>> GetUsersForClaimAsync(System.Security.Claims.Claim claim, CancellationToken cancellationToken)
@@ -98,7 +124,9 @@ public class UserStore : IUserStore
 
     public Task<bool> HasPasswordAsync(User user, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        var hasPassword = !string.IsNullOrWhiteSpace(user.Password);
+
+        return Task.FromResult(hasPassword);
     }
 
     public Task RemoveClaimsAsync(User user, IEnumerable<System.Security.Claims.Claim> claims, CancellationToken cancellationToken)
@@ -111,44 +139,64 @@ public class UserStore : IUserStore
         throw new NotImplementedException();
     }
 
-    public Task SetEmailAsync(User user, string email, CancellationToken cancellationToken)
+    public async Task SetEmailAsync(User user, string email, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        user.Email = email;
+
+        await _usersRepository.Update(user);
     }
 
-    public Task SetEmailConfirmedAsync(User user, bool confirmed, CancellationToken cancellationToken)
+    public async Task SetEmailConfirmedAsync(User user, bool confirmed, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        user.IsConfirmed = confirmed;
+
+        await _usersRepository.Update(user);
     }
 
-    public Task SetNormalizedEmailAsync(User user, string normalizedEmail, CancellationToken cancellationToken)
+    public async Task SetNormalizedEmailAsync(User user, string normalizedEmail, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        user.Email = normalizedEmail;
+
+        await _usersRepository.Update(user);
     }
 
-    public Task SetNormalizedUserNameAsync(User user, string normalizedName, CancellationToken cancellationToken)
+    public async Task SetNormalizedUserNameAsync(User user, string normalizedName, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        user.Email = normalizedName;
+
+        await _usersRepository.Update(user);
     }
 
-    public Task SetPasswordHashAsync(User user, string passwordHash, CancellationToken cancellationToken)
+    public async Task SetPasswordHashAsync(User user, string passwordHash, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        user.Password = passwordHash;
+
+        await _usersRepository.Update(user);
     }
 
-    public Task SetSecurityStampAsync(User user, string stamp, CancellationToken cancellationToken)
+    public async Task SetSecurityStampAsync(User user, string stamp, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        user.SecurityStamp = stamp;
+
+        await _usersRepository.Update(user);
     }
 
-    public Task SetUserNameAsync(User user, string userName, CancellationToken cancellationToken)
+    public async Task SetUserNameAsync(User user, string userName, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        user.Email = userName;
+
+        await _usersRepository.Update(user);
     }
 
-    public Task<IdentityResult> UpdateAsync(User user, CancellationToken cancellationToken)
+    public async Task<IdentityResult> UpdateAsync(User user, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        await _usersRepository.Update(user);
+
+        return IdentityResult.Success;
+    }
+
+    public void Dispose()
+    {
     }
 }
 

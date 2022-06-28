@@ -7,12 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Authorization\**" />
+    <Content Remove="Authorization\**" />
+    <EmbeddedResource Remove="Authorization\**" />
+    <None Remove="Authorization\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\IdentityCustomDatabase.Shared\IdentityCustomDatabase.Shared.csproj" />
     <ProjectReference Include="..\IdentityCustomDatabaseDataAccess\IdentityCustomDatabase.DataAccess.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Authorization\" />
+    <Folder Include="TailwindBuild\styles\" />
+    <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\js\" />
   </ItemGroup>
 
 </Project>
