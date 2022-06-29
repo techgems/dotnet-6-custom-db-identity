@@ -6,14 +6,91 @@
     <meta name="theme-color" content="#000000" />
     <link rel="shortcut icon" href="~/assets/img/favicon.ico" />
     <link rel="apple-touch-icon" sizes="76x76" href="~/assets/img/apple-icon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" />
     <link rel="stylesheet" href="~/assets/vendor/@@fortawesome/fontawesome-free/css/all.min.css" />
     <link rel="stylesheet" href="~/css/tailwind.css" />
 
     <title>@ViewData["Title"]</title>
 </head>
 <body class="text-blueGray-700 antialiased">
-    @RenderBody()
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+        <vc:dashboard-navbar></vc:dashboard-navbar>
+        <div class="relative md:ml-64 bg-blueGray-50">
+            <nav class="absolute top-0 left-0 w-full z-10 bg-transparent md:flex-row md:flex-nowrap md:justify-start flex items-center p-4">
+                <div class="w-full mx-autp items-center flex justify-between md:flex-nowrap flex-wrap md:px-10 px-4">
+                    <a class="text-white text-sm uppercase hidden lg:inline-block font-semibold"
+                       href="./index.html">Dashboard</a>
+                    <form class="md:flex hidden flex-row flex-wrap items-center lg:ml-auto mr-3">
+                        <div class="relative flex w-full flex-wrap items-stretch">
+                            <span class="z-10 h-full leading-snug font-normal absolute text-center text-blueGray-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3">
+                                <i class="fas fa-search"></i>
+                            </span>
+                            <input type="text"
+                                   placeholder="Search here..."
+                                   class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm shadow outline-none focus:outline-none focus:ring w-full pl-10" />
+                        </div>
+                    </form>
+                    <ul class="flex-col md:flex-row list-none items-center hidden md:flex">
+                        <a class="text-blueGray-500 block"
+                           href="#pablo"
+                           onclick="openDropdown(event,'user-dropdown')">
+                            <div class="items-center flex">
+                                <span class="w-12 h-12 text-sm text-white bg-blueGray-200 inline-flex items-center justify-center rounded-full">
+                                    <img alt="..."
+                                         class="w-full rounded-full align-middle border-none shadow-lg"
+                                         src="../../assets/img/team-1-800x800.jpg" />
+                                </span>
+                            </div>
+                        </a>
+                        <div class="hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48"
+                             id="user-dropdown">
+                            <a href="#pablo"
+                               class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Action</a><a href="#pablo"
+                                                                                                                                                  class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Another action</a><a href="#pablo"
+                                                                                                                                                                                                                                                                             class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Something else here</a>
+                            <div class="h-0 my-2 border border-solid border-blueGray-100"></div>
+                            <a href="#pablo"
+                               class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Seprated link</a>
+                        </div>
+                    </ul>
+                </div>
+            </nav>
+            @RenderBody()
+        </div>
+    </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" charset="utf-8"></script>
 <script src="https://unpkg.com/@@popperjs/core@2/dist/umd/popper.js"></script>
+<script type="text/javascript">
+    /* Make dynamic date appear */
+    (function() {
+        if (document.getElementById("get-current-year")) {
+            document.getElementById(
+                "get-current-year"
+            ).innerHTML = new Date().getFullYear();
+        }
+    })();
+    /* Sidebar - Side navigation menu on mobile/responsive mode */
+    function toggleNavbar(collapseID) {
+        document.getElementById(collapseID).classList.toggle("hidden");
+        document.getElementById(collapseID).classList.toggle("bg-white");
+        document.getElementById(collapseID).classList.toggle("m-2");
+        document.getElementById(collapseID).classList.toggle("py-3");
+        document.getElementById(collapseID).classList.toggle("px-6");
+    }
+    /* Function for dropdowns */
+    function openDropdown(event, dropdownID) {
+        let element = event.target;
+        while (element.nodeName !== "A") {
+            element = element.parentNode;
+        }
+        Popper.createPopper(element, document.getElementById(dropdownID), {
+            placement: "bottom-start",
+        });
+        document.getElementById(dropdownID).classList.toggle("hidden");
+        document.getElementById(dropdownID).classList.toggle("block");
+    }
+</script>
 @await RenderSectionAsync("Scripts", required: false)
 </html>
