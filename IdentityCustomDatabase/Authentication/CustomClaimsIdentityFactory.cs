@@ -5,6 +5,12 @@ using System.Security.Claims;
 
 namespace IdentityCustomDatabase.Authentication;
 
+public static class CustomClaims
+{
+    public static readonly string Name = "custom_name";
+}
+
+
 public class CustomClaimsIdentityFactory : UserClaimsPrincipalFactory<User>
 {
     public CustomClaimsIdentityFactory(UserManager<User> userManager, IOptions<IdentityOptions> optionsAccessor) : base(userManager, optionsAccessor)

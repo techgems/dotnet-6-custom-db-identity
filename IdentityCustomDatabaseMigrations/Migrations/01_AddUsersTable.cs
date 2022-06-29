@@ -26,7 +26,7 @@ public class AddUsersTable : Migration
 
         Create.Table("Users")
             .WithColumn("Id").AsInt32().PrimaryKey().Identity()
-            .WithColumn("Email").AsString(1000).NotNullable().Unique()
+            .WithColumn("Email").AsString(500).NotNullable().Unique()
             .WithColumn("Password").AsCustom("nvarchar(max)").NotNullable()
             .WithColumn("PreferredName").AsString(500).NotNullable()
             .WithColumn("SecurityStamp").AsCustom("nvarchar(max)").NotNullable()

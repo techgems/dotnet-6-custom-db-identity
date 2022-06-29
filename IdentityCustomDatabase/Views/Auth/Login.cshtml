@@ -9,7 +9,7 @@
 
 <div class="w-full lg:w-4/12 px-4">
     <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200 border-0">
-        <div class="flex-auto px-4 lg:px-10 py-10 pt-4">
+        <div class="flex-auto px-4 lg:px-10 pt-10 pb-4 pt-8">
             <form asp-controller="Auth" asp-action="Login">
                 <div class="relative w-full mb-3">
                     <label asp-for="Email" class="block uppercase text-blueGray-600 text-xs font-bold mb-2">Email</label>
@@ -30,19 +30,22 @@
                     <span asp-validation-for="RememberMe"></span>
                 </div>
                 <div class="text-center mt-6">
-                    <button type="button" class="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150">
+                    <button type="submit" class="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150">
                         Sign In
                     </button>
                 </div>
             </form>
         </div>
-    </div>
-    <div class="flex flex-wrap mt-6">
-        <div class="w-1/2">
-            <a asp-action="ForgotPassword" asp-controller="Auth" class="text-blueGray-200"><small>Forgot password?</small></a>
+        <div class="bg-blueGray-600 rounded-b-lg">
+            <div class="flex justify-between my-6">
+                <a asp-action="ForgotPassword" asp-controller="Auth" class="text-blueGray-400 hover:text-blueGray-300 mx-auto">
+                    <small>Forgot password?</small>
+                </a>
+                <a asp-action="Register" asp-controller="Auth" class="text-blueGray-400 hover:text-blueGray-300 mx-auto">
+                    <small>Create new account</small>
+                </a>
+            </div>
         </div>
-        <div class="w-1/2 text-right">
-            <a asp-action="Register" asp-controller="Auth" class="text-blueGray-200"><small>Create new account</small></a>
-        </div>
     </div>
+
 </div>

@@ -71,7 +71,7 @@ public class UserStore : IUserStore
         var securityClaims = new List<System.Security.Claims.Claim>();
         foreach (var claim in claims)
         {
-            //securityClaims.Add(new System.Security.Claims.Claim { })
+            securityClaims.Add(new System.Security.Claims.Claim(claim.Key, claim.Value));
         }
 
         return securityClaims;

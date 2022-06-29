@@ -46,7 +46,7 @@ namespace IdentityCustomDatabase.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        public async Task<IActionResult> Login(LoginViewModel model, string returnUrl = null)
+        public async Task<IActionResult> Login(LoginViewModel model, string? returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;
 
@@ -57,11 +57,12 @@ namespace IdentityCustomDatabase.Controllers
                 var user = await _userManager.FindByEmailAsync(model.Email);
 
 
-                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: false);
+                var result = await _signInManager.PasswordSignInAsync(user, model.Password, model.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
                     user.LastLogin = DateTime.Now;
                     await _userManager.UpdateAsync(user);
+                    return RedirectToAction("Index", "Dashboard");
                 }
                 else
                 {
@@ -93,7 +94,7 @@ namespace IdentityCustomDatabase.Controllers
                 {
                     CreateDate = DateTime.Now,
                     Email = model.Email,
-                    RoleId = 0,
+                    RoleId = 1,
                     PreferredName = model.PreferredName,
                     LastLogin = DateTime.Now,
                     Password = model.Password
@@ -107,7 +108,7 @@ namespace IdentityCustomDatabase.Controllers
                         $"You have created your lead dog account. Please click this link to continue: {callbackUrl}");
                       */
                     await _signInManager.SignInAsync(user, isPersistent: false);
-                    return RedirectToAction("LoggedIn", "Test");
+                    return RedirectToAction("Index", "Dashboard");
                 }
                 AddErrors(result);
             }
