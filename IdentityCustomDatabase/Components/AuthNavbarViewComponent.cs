@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace IdentityCustomDatabase.Components.ViewComponents;
+namespace CustomIdentity.Web.Components;
 
 public class AuthNavbarViewComponent : ViewComponent
 {

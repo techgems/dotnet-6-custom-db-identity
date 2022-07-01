@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IdentityCustomDatabase.Shared.Auth;
+namespace CustomIdentity.Shared.Auth;
 
 public class ResetPasswordViewModel
 {

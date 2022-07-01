@@ -1,6 +1,6 @@
 using System;
 
-namespace IdentityCustomDatabaseDataAccess.Entities
+namespace CustomIdentity.DataAccess.Entities
 {
     public class Role
     {

@@ -1,14 +1,14 @@
-﻿using IdentityCustomDatabaseDataAccess.Entities;
-using IdentityCustomDatabaseDataAccess.Stores.Interfaces;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using IdentityCustomDatabase.Repositories.Interfaces;
+using CustomIdentity.DataAccess.Entities;
+using CustomIdentity.DataAccess.Repositories.Interfaces;
+using CustomIdentity.DataAccess.Stores.Interfaces;
 
-namespace IdentityCustomDatabaseDataAccess.Stores;
+namespace CustomIdentity.DataAccess.Stores;
 
 public class RoleStore : IRoleStore
 {

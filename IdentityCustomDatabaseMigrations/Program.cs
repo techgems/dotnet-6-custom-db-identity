@@ -1,4 +1,4 @@
-﻿using IdentityCustomDatabaseMigrations;
+﻿using CustomIdentity.Migrations;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 

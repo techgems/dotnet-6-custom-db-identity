@@ -1,7 +1,6 @@
-﻿using IdentityCustomDatabase.DataAccess.Repositories.Interfaces;
-using IdentityCustomDatabase.Repositories.Interfaces;
-using IdentityCustomDatabaseDataAccess.Entities;
-using IdentityCustomDatabaseDataAccess.Stores.Interfaces;
+﻿using CustomIdentity.DataAccess.Entities;
+using CustomIdentity.DataAccess.Repositories.Interfaces;
+using CustomIdentity.DataAccess.Stores.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
@@ -9,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IdentityCustomDatabaseDataAccess.Stores;
+namespace CustomIdentity.DataAccess.Stores;
 
 public class UserStore : IUserStore
 {

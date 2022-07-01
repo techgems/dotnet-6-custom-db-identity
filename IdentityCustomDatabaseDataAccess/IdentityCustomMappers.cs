@@ -1,9 +1,8 @@
 using System;
 using RepoDb;
-using IdentityCustomDatabaseDataAccess.Entities;
+using CustomIdentity.DataAccess.Entities;
 
-
-namespace IdentityCustomDatabaseDataAccess
+namespace CustomIdentity.DataAccess
 {
     public static class IdentityCustomMappers
     {

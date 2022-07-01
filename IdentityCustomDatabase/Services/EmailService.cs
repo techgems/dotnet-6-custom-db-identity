@@ -1,6 +1,6 @@
-﻿using IdentityCustomDatabase.Services.Interfaces;
+﻿using CustomIdentity.Web.Services.Interfaces;
 
-namespace IdentityCustomDatabase.Services;
+namespace CustomIdentity.Web.Services;
 
 public class EmailService : IEmailService
 {

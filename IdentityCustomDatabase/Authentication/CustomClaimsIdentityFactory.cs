@@ -1,9 +1,9 @@
-﻿using IdentityCustomDatabaseDataAccess.Entities;
+﻿using CustomIdentity.DataAccess.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using System.Security.Claims;
 
-namespace IdentityCustomDatabase.Authentication;
+namespace CustomIdentity.Web.Authentication;
 
 public static class CustomClaims
 {

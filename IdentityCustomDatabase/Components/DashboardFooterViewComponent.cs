@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace IdentityCustomDatabase.Components;
+namespace CustomIdentity.Web.Components;
 
 public class DashboardFooterViewComponent : ViewComponent
 {

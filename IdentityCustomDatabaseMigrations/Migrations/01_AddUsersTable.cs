@@ -5,12 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IdentityCustomDatabaseMigrations.Migrations;
+namespace CustomIdentity.Migrations.Migrations;
 
 [Migration(1)]
 public class AddUsersTable : Migration
 {
-    
+
     public override void Down()
     {
         Delete.Table("Users");

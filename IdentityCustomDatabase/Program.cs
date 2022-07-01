@@ -1,7 +1,7 @@
-using IdentityCustomDatabase.Authentication;
-using IdentityCustomDatabase.Services;
-using IdentityCustomDatabase.Services.Interfaces;
-using IdentityCustomDatabaseDataAccess.DI;
+using CustomIdentity.DataAccess.DI;
+using CustomIdentity.Web.Authentication;
+using CustomIdentity.Web.Services;
+using CustomIdentity.Web.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IdentityCustomDatabase.Repositories.Interfaces;
+namespace CustomIdentity.DataAccess.Repositories.Interfaces;
 
 public interface IGenericRepository<EntityType, KeyType>
 {

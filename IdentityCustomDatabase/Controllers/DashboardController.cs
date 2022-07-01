@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace IdentityCustomDatabase.Controllers;
+namespace CustomIdentity.Web.Controllers;
 
 [Authorize]
 public class DashboardController : Controller

@@ -1,12 +1,11 @@
-﻿using IdentityCustomDatabase.Repositories.Interfaces;
-using IdentityCustomDatabaseDataAccess.Entities;
+﻿using CustomIdentity.DataAccess.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IdentityCustomDatabase.DataAccess.Repositories.Interfaces;
+namespace CustomIdentity.DataAccess.Repositories.Interfaces;
 
 public interface IClaimsRepository : IGenericRepository<Claim, int>
 {

@@ -1,7 +1,5 @@
-﻿using IdentityCustomDatabase.DataAccess.Repositories;
-using IdentityCustomDatabase.DataAccess.Repositories.Interfaces;
-using IdentityCustomDatabase.Repositories;
-using IdentityCustomDatabase.Repositories.Interfaces;
+﻿using CustomIdentity.DataAccess.Repositories;
+using CustomIdentity.DataAccess.Repositories.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -9,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IdentityCustomDatabaseDataAccess.DI;
+namespace CustomIdentity.DataAccess.DI;
 
 public static class DataAccessDI
 {

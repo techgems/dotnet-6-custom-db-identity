@@ -1,4 +1,4 @@
-﻿namespace IdentityCustomDatabase.Services.Interfaces;
+﻿namespace CustomIdentity.Web.Services.Interfaces;
 
 public interface IEmailService
 {

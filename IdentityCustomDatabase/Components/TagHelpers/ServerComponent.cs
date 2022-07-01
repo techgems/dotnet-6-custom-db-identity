@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 
-namespace IdentityCustomDatabase.TagHelpers;
+namespace CustomIdentity.Web.Components.TagHelpers;
 
 public abstract class ServerComponent : TagHelper
 {

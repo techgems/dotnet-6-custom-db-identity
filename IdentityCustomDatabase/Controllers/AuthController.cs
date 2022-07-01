@@ -1,13 +1,13 @@
-﻿using IdentityCustomDatabase.Services.Interfaces;
-using IdentityCustomDatabase.Shared.Auth;
-using IdentityCustomDatabase.Utils;
-using IdentityCustomDatabaseDataAccess.Entities;
+﻿using CustomIdentity.DataAccess.Entities;
+using CustomIdentity.Shared.Auth;
+using CustomIdentity.Web.Services.Interfaces;
+using CustomIdentity.Web.Utils;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
-namespace IdentityCustomDatabase.Controllers
+namespace CustomIdentity.Web.Controllers
 {
     public class AuthController : Controller
     {
@@ -157,7 +157,7 @@ namespace IdentityCustomDatabase.Controllers
             if (ModelState.IsValid)
             {
                 var user = await _userManager.FindByEmailAsync(model.Email);
-                if (user == null || !(await _userManager.IsEmailConfirmedAsync(user)))
+                if (user == null || !await _userManager.IsEmailConfirmedAsync(user))
                 {
                     // Don't reveal that the user does not exist or is not confirmed
                     return RedirectToAction(nameof(ForgotPasswordConfirmation));

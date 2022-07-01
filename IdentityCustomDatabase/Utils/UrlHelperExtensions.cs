@@ -1,7 +1,7 @@
-﻿using IdentityCustomDatabase.Controllers;
+﻿using CustomIdentity.Web.Controllers;
 using Microsoft.AspNetCore.Mvc;
 
-namespace IdentityCustomDatabase.Utils;
+namespace CustomIdentity.Web.Utils;
 
 public static class UrlHelperExtensions
 {

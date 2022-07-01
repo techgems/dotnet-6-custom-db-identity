@@ -14,8 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\IdentityCustomDatabase.Shared\IdentityCustomDatabase.Shared.csproj" />
-    <ProjectReference Include="..\IdentityCustomDatabaseDataAccess\IdentityCustomDatabase.DataAccess.csproj" />
+    <ProjectReference Include="..\IdentityCustomDatabase.Shared\CustomIdentity.Shared.csproj" />
+    <ProjectReference Include="..\IdentityCustomDatabaseDataAccess\CustomIdentity.DataAccess.csproj" />
   </ItemGroup>
 
   <ItemGroup>

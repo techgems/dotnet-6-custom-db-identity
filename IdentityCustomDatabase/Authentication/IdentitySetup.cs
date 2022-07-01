@@ -1,10 +1,10 @@
-﻿using IdentityCustomDatabaseDataAccess.Entities;
-using IdentityCustomDatabaseDataAccess.Stores;
+﻿using CustomIdentity.DataAccess.Entities;
+using CustomIdentity.DataAccess.Stores;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
-namespace IdentityCustomDatabase.Authentication;
+namespace CustomIdentity.Web.Authentication;
 
 public static class IdentitySetup
 {

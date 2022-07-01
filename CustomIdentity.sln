@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityCustomDatabase", "IdentityCustomDatabase\IdentityCustomDatabase.csproj", "{34F528FD-4CC4-430A-8233-AB50F7C4AE4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomIdentity.Web", "IdentityCustomDatabase\CustomIdentity.Web.csproj", "{34F528FD-4CC4-430A-8233-AB50F7C4AE4F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{E0A2DD2C-B25F-4D8E-8F92-6E69D4517E16}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Migrations", "Migrations", "{AFCA4BEF-337F-428C-8C34-DB666609D908}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityCustomDatabase.DataAccess", "IdentityCustomDatabaseDataAccess\IdentityCustomDatabase.DataAccess.csproj", "{735E96BC-1B3A-458F-B93C-430B92E7A7C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomIdentity.DataAccess", "IdentityCustomDatabaseDataAccess\CustomIdentity.DataAccess.csproj", "{735E96BC-1B3A-458F-B93C-430B92E7A7C5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityCustomDatabaseMigrations", "IdentityCustomDatabaseMigrations\IdentityCustomDatabaseMigrations.csproj", "{45C16862-C4D7-4177-8B33-5A8E1AAD9356}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomIdentity.Migrations", "IdentityCustomDatabaseMigrations\CustomIdentity.Migrations.csproj", "{45C16862-C4D7-4177-8B33-5A8E1AAD9356}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityCustomDatabase.Shared", "IdentityCustomDatabase.Shared\IdentityCustomDatabase.Shared.csproj", "{215277E4-67E8-41C9-B4F2-BADB803173D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomIdentity.Shared", "IdentityCustomDatabase.Shared\CustomIdentity.Shared.csproj", "{215277E4-67E8-41C9-B4F2-BADB803173D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

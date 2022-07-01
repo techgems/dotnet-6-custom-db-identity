@@ -1,12 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace IdentityCustomDatabase.Pages
+namespace CustomIdentity.Web.Pages;
+
+public class IndexModel : PageModel
 {
-    public class HomeModel : PageModel
+    public void OnGet()
     {
-        public void OnGet()
-        {
-        }
     }
 }
