@@ -30,16 +30,32 @@ const selectPalette = {
 
 const primaryColors = {
     text: "#FFF",
-    light: selectPalette.pink[400],
+    '50': selectPalette.pink[50],
+    '100': selectPalette.pink[100],
+    '200': selectPalette.pink[200],
+    '300': selectPalette.pink[300],
+    '400': selectPalette.pink[400],
+    '500': selectPalette.pink[500],
     DEFAULT: selectPalette.pink[600],
-    dark: selectPalette.pink[700]
+    '600': selectPalette.pink[600],
+    '700': selectPalette.pink[700],
+    '800': selectPalette.pink[800],
+    '900': selectPalette.pink[900]
 };
 
 const accentColors = {
     text: "#FFF",
-    light: selectPalette.ochre[400],
+    '50': selectPalette.ochre[50],
+    '100': selectPalette.ochre[100],
+    '200': selectPalette.ochre[200],
+    '300': selectPalette.ochre[300],
+    '400': selectPalette.ochre[400],
+    '500': selectPalette.ochre[500],
     DEFAULT: selectPalette.ochre[600],
-    dark: selectPalette.ochre[700]
+    '600': selectPalette.ochre[600],
+    '700': selectPalette.ochre[700],
+    '800': selectPalette.ochre[800],
+    '900': selectPalette.ochre[900]
 };
 
 module.exports = {
