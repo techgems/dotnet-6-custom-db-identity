@@ -2,6 +2,7 @@ using CustomIdentity.DataAccess.DI;
 using CustomIdentity.Web.Authentication;
 using CustomIdentity.Web.Services;
 using CustomIdentity.Web.Services.Interfaces;
+using Tailwind;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +20,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
+    app.RunTailwind("build:tailwind", "./");
 }
 else
 {

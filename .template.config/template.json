@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/template.json",
+  "author": "TechGems",
+  "classifications": [ "Web", "MVC" ],
+  "name": "Notus ASP.NET MVC",
+  "description": "An MVC template using NotusJS by Creative Tim. This also contains an implementation of ASP.NET Core Identity with a custom, simpler database and with the ORM Repo DB.",
+  "shortName": "NotusJS.Core",
+  "sourceName": "NotusCustomIdentity",
+  "tags": {
+    "type": "project",
+    "language": "C#"
+  },
+  "preferNameDirectory": true
+}

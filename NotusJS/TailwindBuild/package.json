@@ -1,0 +1,19 @@
+{
+  "name": "custom-identity-notus",
+  "version": "1.1.0",
+  "description": "Build for Notus on ASP.NET Core MVC with custom Identity database.",
+  "license": "MIT",
+  "scripts": {
+    "build:tailwind": "tailwind build -i styles/index.css -o ../wwwroot/css/tailwind.css --minify",
+    "build:fontawesome": "mkdir -p assets/vendor/@fortawesome/fontawesome-free/webfonts && mkdir -p assets/vendor/@fortawesome/fontawesome-free/css && cp -a ./node_modules/@fortawesome/fontawesome-free/webfonts assets/vendor/@fortawesome/fontawesome-free/ && cp ./node_modules/@fortawesome/fontawesome-free/css/all.min.css assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "5.15.3",
+    "@tailwindcss/forms": "0.2.1",
+    "tailwindcss": "2.2.19"
+  },
+  "devDependencies": {
+    "autoprefixer": "10.2.5",
+    "postcss": "8.2.8"
+  }
+}

@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\Shared\Components\NotusDashboardSidebar\" />
+    <Folder Include="Views\Shared\Components\NotusAuthHeader\" />
+    <Folder Include="Views\Shared\Components\NotusAuthFooter\" />
+    <Folder Include="Views\Shared\Components\NotusDashboardFooter\" />
+    <Folder Include="Views\Shared\Components\NotusDashboardHeader\" />
+    <Folder Include="Views\Shared\Components\NotusLandingHeader\" />
+  </ItemGroup>
+
+</Project>
