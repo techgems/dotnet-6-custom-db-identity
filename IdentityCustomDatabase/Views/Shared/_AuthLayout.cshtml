@@ -11,18 +11,18 @@
 
     <title>@ViewData["Title"]</title>
 </head>
-<body class="text-blueGray-700 antialiased">
-    <vc:auth-navbar></vc:auth-navbar>
+<body class="text-slate-700 antialiased">
+    <vc:notus-auth-header></vc:notus-auth-header>
     <main>
         <section class="relative w-full h-full py-40 min-h-screen">
-            <div class="absolute top-0 w-full h-full bg-blueGray-800 bg-full bg-no-repeat"
+            <div class="absolute top-0 w-full h-full bg-slate-800 bg-full bg-no-repeat"
                  style="background-image: url('@Url.Content("~/assets/img/register_bg_2.png")')"></div>
             <div class="container mx-auto px-4 h-full">
                 <div class="flex content-center items-center justify-center h-full">
                     @RenderBody()
                 </div>
             </div>
-            <vc:auth-footer></vc:auth-footer>
+            <vc:notus-auth-footer></vc:notus-auth-footer>
         </section>
     </main>
 </body>

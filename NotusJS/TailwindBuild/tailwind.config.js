@@ -1,5 +1,4 @@
 const plugin = require("tailwindcss/plugin");
-const colors = require("tailwindcss/colors");
 
 const selectPalette = {
     pink: {
@@ -59,17 +58,13 @@ const accentColors = {
 };
 
 module.exports = {
-    purge: {
-        enabled: true,
-        content: ["../../**/*.cshtml", "../../**/*.cs"],
-        options: {
-            safelist: [],
-        },
-    },
+    content: [
+        //"../../**/*.cshtml",
+        //"../../**/*.cs",
+        "../../../**/*.cshtml",
+        "../../../**/*.cs"
+    ],
     theme: {
-        colors: {
-            ...colors,
-        },
         extend: {
             colors: {
                 primary: primaryColors,

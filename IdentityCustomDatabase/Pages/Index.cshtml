@@ -5,42 +5,17 @@
     Layout = null;
 }
 
-<!--
-
-=========================================================
-* Notus JS - v1.1.0 based on Tailwind Starter Kit by Creative Tim
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/notus-js
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md)
-
-* Tailwind Starter Kit Page: https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
--->
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <link rel="shortcut icon" href="~/assets/img/favicon.ico" />
-    <link rel="apple-touch-icon"
-          sizes="76x76"
-          href="~/assets/img/apple-icon.png" />
-    <link rel="stylesheet"
-          href="~/assets/vendor/@@fortawesome/fontawesome-free/css/all.min.css" />
-    <link rel="stylesheet" href="../css/tailwind.css" />
+    <vc:notus-styles></vc:notus-styles>
     <title>Landing | Notus JS</title>
 </head>
-<body class="text-blueGray-700 antialiased">
-    <vc:landing-header></vc:landing-header>
+<body class="text-slate-700 antialiased">
+    <vc:notus-landing-header></vc:notus-landing-header>
     <main>
         <div class="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
             <div class="absolute top-0 w-full h-full bg-center bg-cover"
@@ -57,7 +32,7 @@
                             <h1 class="text-white font-semibold text-5xl">
                                 Your story starts with us.
                             </h1>
-                            <p class="mt-4 text-lg text-blueGray-200">
+                            <p class="mt-4 text-lg text-slate-200">
                                 This is a simple example of a Landing Page you can build using
                                 Notus JS. It features multiple CSS components based on the
                                 Tailwind CSS design system.
@@ -75,12 +50,12 @@
                      viewBox="0 0 2560 100"
                      x="0"
                      y="0">
-                    <polygon class="text-blueGray-200 fill-current"
+                    <polygon class="text-slate-200 fill-current"
                              points="2560 0 2560 100 0 100"></polygon>
                 </svg>
             </div>
         </div>
-        <section class="pb-20 bg-blueGray-200 -mt-24">
+        <section class="pb-20 bg-slate-200 -mt-24">
             <div class="container mx-auto px-4">
                 <div class="flex flex-wrap">
                     <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
@@ -90,7 +65,7 @@
                                     <i class="fas fa-award"></i>
                                 </div>
                                 <h6 class="text-xl font-semibold">Awarded Agency</h6>
-                                <p class="mt-2 mb-4 text-blueGray-500">
+                                <p class="mt-2 mb-4 text-slate-500">
                                     Divide details about your product or agency work into parts.
                                     A paragraph describing a feature will be enough.
                                 </p>
@@ -104,7 +79,7 @@
                                     <i class="fas fa-retweet"></i>
                                 </div>
                                 <h6 class="text-xl font-semibold">Free Revisions</h6>
-                                <p class="mt-2 mb-4 text-blueGray-500">
+                                <p class="mt-2 mb-4 text-slate-500">
                                     Keep you user engaged by providing meaningful information.
                                     Remember that by this time, the user is curious.
                                 </p>
@@ -118,7 +93,7 @@
                                     <i class="fas fa-fingerprint"></i>
                                 </div>
                                 <h6 class="text-xl font-semibold">Verified Company</h6>
-                                <p class="mt-2 mb-4 text-blueGray-500">
+                                <p class="mt-2 mb-4 text-slate-500">
                                     Write a few lines about each one. A paragraph describing a
                                     feature will be enough. Keep you user engaged!
                                 </p>
@@ -128,23 +103,23 @@
                 </div>
                 <div class="flex flex-wrap items-center mt-32">
                     <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
-                        <div class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
+                        <div class="text-slate-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
                             <i class="fas fa-user-friends text-xl"></i>
                         </div>
                         <h3 class="text-3xl mb-2 font-semibold leading-normal">
                             Working with us is a pleasure
                         </h3>
-                        <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
+                        <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-slate-600">
                             Don't let your uses guess by attaching tooltips and popoves to
                             any element. Just make sure you enable them first via
                             JavaScript.
                         </p>
-                        <p class="text-lg font-light leading-relaxed mt-0 mb-4 text-blueGray-600">
+                        <p class="text-lg font-light leading-relaxed mt-0 mb-4 text-slate-600">
                             The kit comes with three pre-built pages to help you get started
                             faster. You can change the text and images and you're good to
                             go. Just make sure you enable them first via JavaScript.
                         </p>
-                        <a asp-page="/Index" class="font-bold text-blueGray-700 mt-8">Check Notus JS!</a>
+                        <a asp-page="/Index" class="font-bold text-slate-700 mt-8">Check Notus JS!</a>
                     </div>
                     <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
                         <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-primary-500">
@@ -200,7 +175,7 @@
                                 <i class="fas fa-rocket text-xl"></i>
                             </div>
                             <h3 class="text-3xl font-semibold">A growing company</h3>
-                            <p class="mt-4 text-lg leading-relaxed text-blueGray-500">
+                            <p class="mt-4 text-lg leading-relaxed text-slate-500">
                                 The extension comes with three pre-built pages to help you get
                                 started faster. You can change the text and images and you're
                                 good to go.
@@ -214,7 +189,7 @@
                                             </span>
                                         </div>
                                         <div>
-                                            <h4 class="text-blueGray-500">
+                                            <h4 class="text-slate-500">
                                                 Carefully crafted components
                                             </h4>
                                         </div>
@@ -228,7 +203,7 @@
                                             </span>
                                         </div>
                                         <div>
-                                            <h4 class="text-blueGray-500">Amazing page examples</h4>
+                                            <h4 class="text-slate-500">Amazing page examples</h4>
                                         </div>
                                     </div>
                                 </li>
@@ -240,7 +215,7 @@
                                             </span>
                                         </div>
                                         <div>
-                                            <h4 class="text-blueGray-500">Dynamic components</h4>
+                                            <h4 class="text-slate-500">Dynamic components</h4>
                                         </div>
                                     </div>
                                 </li>
@@ -255,7 +230,7 @@
                 <div class="flex flex-wrap justify-center text-center mb-24">
                     <div class="w-full lg:w-6/12 px-4">
                         <h2 class="text-4xl font-semibold">Here are our heroes</h2>
-                        <p class="text-lg leading-relaxed m-4 text-blueGray-500">
+                        <p class="text-lg leading-relaxed m-4 text-slate-500">
                             According to the National Oceanic and Atmospheric
                             Administration, Ted, Scambos, NSIDClead scentist, puts the
                             potentially record maximum.
@@ -270,7 +245,7 @@
                                  class="shadow-lg rounded-full mx-auto max-w-120-px" />
                             <div class="pt-6 text-center">
                                 <h5 class="text-xl font-bold">Ryan Tompson</h5>
-                                <p class="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
+                                <p class="mt-1 text-sm text-slate-400 uppercase font-semibold">
                                     Web Developer
                                 </p>
                                 <div class="mt-6">
@@ -295,7 +270,7 @@
                                  class="shadow-lg rounded-full mx-auto max-w-120-px" />
                             <div class="pt-6 text-center">
                                 <h5 class="text-xl font-bold">Romina Hadid</h5>
-                                <p class="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
+                                <p class="mt-1 text-sm text-slate-400 uppercase font-semibold">
                                     Marketing Specialist
                                 </p>
                                 <div class="mt-6">
@@ -317,7 +292,7 @@
                                  class="shadow-lg rounded-full mx-auto max-w-120-px" />
                             <div class="pt-6 text-center">
                                 <h5 class="text-xl font-bold">Alexa Smith</h5>
-                                <p class="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
+                                <p class="mt-1 text-sm text-slate-400 uppercase font-semibold">
                                     UI/UX Designer
                                 </p>
                                 <div class="mt-6">
@@ -327,7 +302,7 @@
                                     </button><button class="bg-lightBlue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                                                      type="button">
                                         <i class="fab fa-twitter"></i>
-                                    </button><button class="bg-blueGray-700 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                                    </button><button class="bg-slate-700 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                                                      type="button">
                                         <i class="fab fa-instagram"></i>
                                     </button>
@@ -342,7 +317,7 @@
                                  class="shadow-lg rounded-full mx-auto max-w-120-px" />
                             <div class="pt-6 text-center">
                                 <h5 class="text-xl font-bold">Jenna Kardi</h5>
-                                <p class="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
+                                <p class="mt-1 text-sm text-slate-400 uppercase font-semibold">
                                     Founder and CEO
                                 </p>
                                 <div class="mt-6">
@@ -355,7 +330,7 @@
                                     </button><button class="bg-lightBlue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                                                      type="button">
                                         <i class="fab fa-twitter"></i>
-                                    </button><button class="bg-blueGray-700 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                                    </button><button class="bg-slate-700 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                                                      type="button">
                                         <i class="fab fa-instagram"></i>
                                     </button>
@@ -366,7 +341,7 @@
                 </div>
             </div>
         </section>
-        <section class="pb-20 relative block bg-blueGray-800">
+        <section class="pb-20 relative block bg-slate-800">
             <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20"
                  style="transform: translateZ(0px)">
                 <svg class="absolute bottom-0 overflow-hidden"
@@ -376,7 +351,7 @@
                      viewBox="0 0 2560 100"
                      x="0"
                      y="0">
-                    <polygon class="text-blueGray-800 fill-current"
+                    <polygon class="text-slate-800 fill-current"
                              points="2560 0 2560 100 0 100"></polygon>
                 </svg>
             </div>
@@ -384,7 +359,7 @@
                 <div class="flex flex-wrap text-center justify-center">
                     <div class="w-full lg:w-6/12 px-4">
                         <h2 class="text-4xl font-semibold text-white">Build something</h2>
-                        <p class="text-lg leading-relaxed mt-4 mb-4 text-blueGray-400">
+                        <p class="text-lg leading-relaxed mt-4 mb-4 text-slate-400">
                             Put the potentially record low maximum sea ice extent tihs year
                             down to low ice. According to the National Oceanic and
                             Atmospheric Administration, Ted, Scambos.
@@ -393,35 +368,35 @@
                 </div>
                 <div class="flex flex-wrap mt-12 justify-center">
                     <div class="w-full lg:w-3/12 px-4 text-center">
-                        <div class="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
+                        <div class="text-slate-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
                             <i class="fas fa-medal text-xl"></i>
                         </div>
                         <h6 class="text-xl mt-5 font-semibold text-white">
                             Excelent Services
                         </h6>
-                        <p class="mt-2 mb-4 text-blueGray-400">
+                        <p class="mt-2 mb-4 text-slate-400">
                             Some quick example text to build on the card title and make up
                             the bulk of the card's content.
                         </p>
                     </div>
                     <div class="w-full lg:w-3/12 px-4 text-center">
-                        <div class="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
+                        <div class="text-slate-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
                             <i class="fas fa-poll text-xl"></i>
                         </div>
                         <h5 class="text-xl mt-5 font-semibold text-white">
                             Grow your market
                         </h5>
-                        <p class="mt-2 mb-4 text-blueGray-400">
+                        <p class="mt-2 mb-4 text-slate-400">
                             Some quick example text to build on the card title and make up
                             the bulk of the card's content.
                         </p>
                     </div>
                     <div class="w-full lg:w-3/12 px-4 text-center">
-                        <div class="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
+                        <div class="text-slate-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
                             <i class="fas fa-lightbulb text-xl"></i>
                         </div>
                         <h5 class="text-xl mt-5 font-semibold text-white">Launch time</h5>
-                        <p class="mt-2 mb-4 text-blueGray-400">
+                        <p class="mt-2 mb-4 text-slate-400">
                             Some quick example text to build on the card title and make up
                             the bulk of the card's content.
                         </p>
@@ -429,37 +404,37 @@
                 </div>
             </div>
         </section>
-        <section class="relative block py-24 lg:pt-0 bg-blueGray-800">
+        <section class="relative block py-24 lg:pt-0 bg-slate-800">
             <div class="container mx-auto px-4">
                 <div class="flex flex-wrap justify-center lg:-mt-64 -mt-48">
                     <div class="w-full lg:w-6/12 px-4">
-                        <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200">
+                        <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-slate-200">
                             <div class="flex-auto p-5 lg:p-10">
                                 <h4 class="text-2xl font-semibold">Want to work with us?</h4>
-                                <p class="leading-relaxed mt-1 mb-4 text-blueGray-500">
+                                <p class="leading-relaxed mt-1 mb-4 text-slate-500">
                                     Complete this form and we will get back to you in 24 hours.
                                 </p>
                                 <div class="relative w-full mb-3 mt-8">
-                                    <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                                    <label class="block uppercase text-slate-600 text-xs font-bold mb-2"
                                            for="full-name">Full Name</label><input type="text"
-                                                                                   class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                                                                                   class="border-0 px-3 py-3 placeholder-slate-300 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                                                                                    placeholder="Full Name" />
                                 </div>
                                 <div class="relative w-full mb-3">
-                                    <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                                    <label class="block uppercase text-slate-600 text-xs font-bold mb-2"
                                            for="email">Email</label><input type="email"
-                                                                           class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                                                                           class="border-0 px-3 py-3 placeholder-slate-300 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                                                                            placeholder="Email" />
                                 </div>
                                 <div class="relative w-full mb-3">
-                                    <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                                    <label class="block uppercase text-slate-600 text-xs font-bold mb-2"
                                            for="message">Message</label><textarea rows="4"
                                                                                   cols="80"
-                                                                                  class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
+                                                                                  class="border-0 px-3 py-3 placeholder-slate-300 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
                                                                                   placeholder="Type a message..."></textarea>
                                 </div>
                                 <div class="text-center mt-6">
-                                    <button class="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                    <button class="bg-slate-800 text-white active:bg-slate-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                                             type="button">
                                         Send Message
                                     </button>
@@ -470,7 +445,7 @@
                 </div>
             </div>
         </section>
-        <vc:landing-footer></vc:landing-footer>
+        <vc:notus-landing-footer></vc:notus-landing-footer>
     </main>
 
 </body>

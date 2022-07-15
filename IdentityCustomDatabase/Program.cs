@@ -20,7 +20,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
-    app.RunTailwind("build:tailwind", "./");
+    app.RunTailwind("build:tailwind", "../NotusJS/TailwindBuild/");
 }
 else
 {

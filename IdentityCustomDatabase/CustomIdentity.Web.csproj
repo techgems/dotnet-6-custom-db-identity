@@ -16,6 +16,7 @@
   <ItemGroup>
     <ProjectReference Include="..\IdentityCustomDatabase.Shared\CustomIdentity.Shared.csproj" />
     <ProjectReference Include="..\IdentityCustomDatabaseDataAccess\CustomIdentity.DataAccess.csproj" />
+    <ProjectReference Include="..\NotusJS\NotusJS.csproj" />
   </ItemGroup>
 
   <ItemGroup>

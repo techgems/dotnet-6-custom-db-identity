@@ -8,40 +8,40 @@
 }
 
 <div class="w-full lg:w-4/12 px-4">
-    <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200 border-0">
+    <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-slate-200 border-0">
         <div class="flex-auto px-4 lg:px-10 pt-10 pb-4 pt-8">
             <form asp-controller="Auth" asp-action="Login">
                 <div class="relative w-full mb-3">
-                    <label asp-for="Email" class="block uppercase text-blueGray-600 text-xs font-bold mb-2">Email</label>
-                    <input asp-for="Email" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="Email" />
+                    <label asp-for="Email" class="block uppercase text-slate-600 text-xs font-bold mb-2">Email</label>
+                    <input asp-for="Email" class="border-0 px-3 py-3 placeholder-slate-300 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="Email" />
                     <span asp-validation-for="Email"></span>
                 </div>
                 <div class="relative w-full mb-3">
-                    <label asp-for="Password" class="block uppercase text-blueGray-600 text-xs font-bold mb-2">Password</label>
-                    <input asp-for="Password" type="password" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="Password" />
+                    <label asp-for="Password" class="block uppercase text-slate-600 text-xs font-bold mb-2">Password</label>
+                    <input asp-for="Password" type="password" class="border-0 px-3 py-3 placeholder-slate-300 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="Password" />
                     <span asp-validation-for="Password"></span>
                 </div>
                 <div>
                     <label asp-for="RememberMe" class="inline-flex items-center cursor-pointer">
                         <input asp-for="RememberMe" id="customCheckLogin"
                                type="checkbox"
-                               class="form-checkbox border-0 rounded text-blueGray-700 ml-1 w-5 h-5 ease-linear transition-all duration-150" /><span class="ml-2 text-sm font-semibold text-blueGray-600">Remember me</span>
+                               class="form-checkbox border-0 rounded text-slate-700 ml-1 w-5 h-5 ease-linear transition-all duration-150" /><span class="ml-2 text-sm font-semibold text-slate-600">Remember me</span>
                     </label>
                     <span asp-validation-for="RememberMe"></span>
                 </div>
                 <div class="text-center mt-6">
-                    <button type="submit" class="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150">
+                    <button type="submit" class="bg-slate-800 text-white active:bg-slate-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150">
                         Sign In
                     </button>
                 </div>
             </form>
         </div>
-        <div class="bg-blueGray-600 rounded-b-lg">
+        <div class="bg-slate-600 rounded-b-lg">
             <div class="flex justify-between my-6">
-                <a asp-action="ForgotPassword" asp-controller="Auth" class="text-blueGray-400 hover:text-blueGray-300 mx-auto">
+                <a asp-action="ForgotPassword" asp-controller="Auth" class="text-slate-400 hover:text-slate-300 mx-auto">
                     <small>Forgot password?</small>
                 </a>
-                <a asp-action="Register" asp-controller="Auth" class="text-blueGray-400 hover:text-blueGray-300 mx-auto">
+                <a asp-action="Register" asp-controller="Auth" class="text-slate-400 hover:text-slate-300 mx-auto">
                     <small>Create new account</small>
                 </a>
             </div>
