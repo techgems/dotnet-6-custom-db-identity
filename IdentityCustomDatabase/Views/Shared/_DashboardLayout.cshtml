@@ -4,11 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <link rel="shortcut icon" href="~/assets/img/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="76x76" href="~/assets/img/apple-icon.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" />
-    <link rel="stylesheet" href="~/assets/vendor/@@fortawesome/fontawesome-free/css/all.min.css" />
-    <link rel="stylesheet" href="~/css/tailwind.css" />
+    <vc:notus-styles></vc:notus-styles>
 
     <script defer src="https://unpkg.com/alpinejs@@3.10.2/dist/cdn.min.js"></script>
     <title>@ViewData["Title"]</title>
@@ -16,9 +13,9 @@
 <body class="text-slate-700 antialiased">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root">
-        <vc:dashboard-sidebar></vc:dashboard-sidebar>
+        <vc:notus-dashboard-sidebar></vc:notus-dashboard-sidebar>
         <div class="relative md:ml-64 bg-slate-50">
-            <vc:dashboard-navbar></vc:dashboard-navbar>
+            <vc:notus-dashboard-header></vc:notus-dashboard-header>
             @RenderBody()
         </div>
     </div>
