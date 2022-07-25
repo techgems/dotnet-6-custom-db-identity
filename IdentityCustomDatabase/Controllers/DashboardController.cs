@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CustomIdentity.Web.Controllers;
 
-//[Authorize]
+[Authorize]
 public class DashboardController : Controller
 {
     [HttpGet]

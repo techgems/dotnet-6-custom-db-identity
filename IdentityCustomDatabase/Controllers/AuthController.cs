@@ -117,12 +117,11 @@ namespace CustomIdentity.Web.Controllers
             return View(model);
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+        [HttpGet]
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
-            return RedirectToPage("Index");
+            return RedirectToPage("/Index");
         }
 
         [HttpGet]

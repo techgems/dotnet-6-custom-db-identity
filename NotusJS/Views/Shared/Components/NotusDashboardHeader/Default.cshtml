@@ -8,21 +8,17 @@
                onclick="openDropdown(event,'user-dropdown')">
                 <div class="items-center flex">
                     <span class="profile-pic text-primary bg-white font-bold text-lg">
-                        @*User!.Identity!.Name!.First()*@
+                        @User!.Identity!.Name!.First()
                     </span>
                 </div>
             </a>
             <div class="hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48"
                  id="user-dropdown">
-                <a href="#pablo"
-                   class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700">Action</a>
-                <a href="#pablo"
-                   class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700">Another action</a>
-                <a href="#pablo"
-                   class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700">Something else here</a>
+                <a asp-page="/Profile"
+                   class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700">Profile</a>
                 <div class="h-0 my-2 border border-solid border-slate-100"></div>
-                <a href="#pablo"
-                   class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700">Seprated link</a>
+                <a asp-controller="Auth" asp-action="Logout"
+                   class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700">Log Out</a>
             </div>
         </ul>
     </div>

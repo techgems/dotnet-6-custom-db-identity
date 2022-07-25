@@ -5,7 +5,11 @@ namespace CustomIdentity.Web.Pages;
 
 public class IndexModel : PageModel
 {
-    public void OnGet()
+    public IActionResult OnGet()
     {
+        if(User.Identity is not null && User.Identity.IsAuthenticated)
+            return Redirect("/Dashboard/Index");
+
+        return Page();
     }
 }
