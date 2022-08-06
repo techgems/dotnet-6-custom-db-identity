@@ -138,6 +138,7 @@ namespace CustomIdentity.Web.Controllers
                 throw new ApplicationException($"Unable to load user with ID '{userId}'.");
             }
             var result = await _userManager.ConfirmEmailAsync(user, code);
+
             return View(result.Succeeded ? "ConfirmEmail" : "Error");
         }
 
