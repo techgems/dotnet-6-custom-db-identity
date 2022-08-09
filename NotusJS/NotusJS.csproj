@@ -12,6 +12,12 @@
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Dashboard\" />
+    <Folder Include="Views\Landing\" />
+    <Folder Include="Views\Profile\" />
+  </ItemGroup>
+
 
 
 </Project>

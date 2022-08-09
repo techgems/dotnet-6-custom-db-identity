@@ -15,6 +15,10 @@ public abstract class ServerComponent : TagHelper
         _razorRenderer = razorRenderer;
     }
 
+    [HtmlAttributeNotBound]
+    [ViewContext]
+    public ViewContext? ViewContext { get; set; }
+
     protected async Task<string> GetChildHtmlAsString(TagHelperOutput output)
     {
         var childContent = await output.GetChildContentAsync();
@@ -23,17 +27,33 @@ public abstract class ServerComponent : TagHelper
         return trimmedContent;
     }
 
-    protected async Task RenderPartialView<T>(string viewRoute, TagHelperOutput output, T model)
+    protected async Task RenderPartialView<T>(string viewRoute, TagHelperOutput output, T model) where T : ServerComponentModel
     {
-        var content = await _razorRenderer.RenderAsContent(viewRoute, model);
+        if (ViewContext is null)
+        {
+            throw new ArgumentNullException(nameof(ViewContext));
+        }
 
-        output.TagName = null;
+        var childContent = await output.GetChildContentAsync();
+
+        if (childContent is not null)
+        {
+            model.ChildContent = childContent;
+        }
+
+        var content = await _razorRenderer.RenderAsContent(viewRoute, model, ViewContext);
         output.Content.SetHtmlContent(content);
+        output.TagName = null;
     }
 
     protected async Task RenderPartialView(string viewRoute, TagHelperOutput output)
     {
-        var content = await _razorRenderer.RenderAsContent<object>(viewRoute, null);
+        if (ViewContext is null)
+        {
+            throw new ArgumentNullException(nameof(ViewContext));
+        }
+
+        var content = await _razorRenderer.RenderAsContent<object>(viewRoute, null, ViewContext);
 
         output.TagName = null;
         output.Content.SetHtmlContent(content);

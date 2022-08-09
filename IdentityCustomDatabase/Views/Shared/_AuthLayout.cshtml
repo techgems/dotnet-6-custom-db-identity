@@ -9,7 +9,17 @@
     <title>@ViewData["Title"]</title>
 </head>
 <body class="text-slate-700 antialiased">
-    <vc:notus-auth-header></vc:notus-auth-header>
+    <notus-auth-navbar>
+        <notus-auth-navbar-link link="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-js%2F">
+            <i class="lg:text-slate-200 text-slate-400 fab fa-facebook text-lg leading-lg"></i><span class="lg:hidden inline-block ml-2">Share</span>
+        </notus-auth-navbar-link>
+        <notus-auth-navbar-link link="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-js%2F&text=Start%20your%20development%20with%20a%20Free%20Tailwind%20CSS%20and%20JavaScript%20UI%20Kit%20and%20Admin.%20Let%20Notus%20JS%20amaze%20you%20with%20its%20cool%20features%20and%20build%20tools%20and%20get%20your%20project%20to%20a%20whole%20new%20level.">
+            <i class="lg:text-slate-200 text-slate-400 fab fa-twitter text-lg leading-lg"></i><span class="lg:hidden inline-block ml-2">Tweet</span>
+        </notus-auth-navbar-link>
+        <notus-auth-navbar-link link="https://github.com/creativetimofficial/notus-js?ref=njs-login">
+            <i class="lg:text-slate-200 text-slate-400 fab fa-github text-lg leading-lg"></i><span class="lg:hidden inline-block ml-2">Star</span>
+        </notus-auth-navbar-link>
+    </notus-auth-navbar>
     <main>
         <section class="relative w-full h-full py-40 min-h-screen">
             <div class="absolute top-0 w-full h-full bg-slate-800 bg-full bg-no-repeat"
@@ -26,29 +36,29 @@
 <script src="https://unpkg.com/@@popperjs/core@2/dist/umd/popper.js"></script>
 <script>
     /* Make dynamic date appear */
-    (function () {
-      if (document.getElementById("get-current-year")) {
-        document.getElementById(
-          "get-current-year"
-        ).innerHTML = new Date().getFullYear();
-      }
+    (function() {
+        if (document.getElementById("get-current-year")) {
+            document.getElementById(
+                "get-current-year"
+            ).innerHTML = new Date().getFullYear();
+        }
     })();
     /* Function for opning navbar on mobile */
     function toggleNavbar(collapseID) {
-      document.getElementById(collapseID).classList.toggle("hidden");
-      document.getElementById(collapseID).classList.toggle("block");
+        document.getElementById(collapseID).classList.toggle("hidden");
+        document.getElementById(collapseID).classList.toggle("block");
     }
     /* Function for dropdowns */
     function openDropdown(event, dropdownID) {
-      let element = event.target;
-      while (element.nodeName !== "A") {
-        element = element.parentNode;
-      }
-      Popper.createPopper(element, document.getElementById(dropdownID), {
-        placement: "bottom-start",
-      });
-      document.getElementById(dropdownID).classList.toggle("hidden");
-      document.getElementById(dropdownID).classList.toggle("block");
+        let element = event.target;
+        while (element.nodeName !== "A") {
+            element = element.parentNode;
+        }
+        Popper.createPopper(element, document.getElementById(dropdownID), {
+            placement: "bottom-start",
+        });
+        document.getElementById(dropdownID).classList.toggle("hidden");
+        document.getElementById(dropdownID).classList.toggle("block");
     }
 </script>
 @await RenderSectionAsync("Scripts", required: false)

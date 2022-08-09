@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Html;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,5 +10,5 @@ namespace NotusJS.Components;
 
 public interface IRazorRenderer
 {
-    Task<IHtmlContent> RenderAsContent<T>(string path, T? model);
+    Task<IHtmlContent> RenderAsContent<T>(string path, T? model, ViewContext viewContext);
 }
