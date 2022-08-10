@@ -16,7 +16,6 @@
     <Folder Include="Views\Dashboard\Footer\" />
     <Folder Include="Views\Dashboard\Navbar\" />
     <Folder Include="Views\Dashboard\Sidebar\" />
-    <Folder Include="Views\Landing\Navbar\" />
     <Folder Include="Views\Landing\Hero\" />
     <Folder Include="Views\Landing\Testimonials\" />
     <Folder Include="Views\Profile\Navbar\" />

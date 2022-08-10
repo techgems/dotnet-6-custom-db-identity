@@ -13,9 +13,9 @@ public class LandingFooterModel : ServerComponentModel
 }
 
 [HtmlTargetElement("landing-footer")]
-public class NotusLandingFooterComponent : ServerComponent
+public class LandingFooterComponent : ServerComponent
 {
-    public NotusLandingFooterComponent(IRazorRenderer razorRenderer) : base(razorRenderer)
+    public LandingFooterComponent(IRazorRenderer razorRenderer) : base(razorRenderer)
     {
     }
 

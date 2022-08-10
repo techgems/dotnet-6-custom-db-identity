@@ -15,7 +15,22 @@
     <title>Landing | Notus JS</title>
 </head>
 <body class="text-slate-700 antialiased">
-    <vc:notus-landing-header></vc:notus-landing-header>
+    <landing-navbar>
+        <landing-navbar-link link="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-js%2F">
+            <i class="lg:text-slate-200 text-slate-400 fab fa-facebook text-lg leading-lg"></i><span class="lg:hidden inline-block ml-2">Share</span>
+        </landing-navbar-link>
+        <landing-navbar-link link="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-js%2F&text=Start%20your%20development%20with%20a%20Free%20Tailwind%20CSS%20and%20JavaScript%20UI%20Kit%20and%20Admin.%20Let%20Notus%20JS%20amaze%20you%20with%20its%20cool%20features%20and%20build%20tools%20and%20get%20your%20project%20to%20a%20whole%20new%20level.">
+            <i class="lg:text-slate-200 text-slate-400 fab fa-twitter text-lg leading-lg"></i><span class="lg:hidden inline-block ml-2">Tweet</span>
+        </landing-navbar-link>
+        <landing-navbar-link link="https://github.com/creativetimofficial/notus-js?ref=njs-login">
+            <i class="lg:text-slate-200 text-slate-400 fab fa-github text-lg leading-lg"></i><span class="lg:hidden inline-block ml-2">Star</span>
+        </landing-navbar-link>
+        <li class="flex items-center">
+            <a asp-controller="Auth" asp-action="Login" class="bg-white text-slate-700 active:bg-slate-50 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150">
+                Login
+            </a>
+        </li>
+    </landing-navbar>
     <main>
         <div class="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
             <div class="absolute top-0 w-full h-full bg-center bg-cover"
