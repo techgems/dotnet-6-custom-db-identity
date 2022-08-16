@@ -13,9 +13,9 @@ public class AuthNavbarModel : ServerComponentModel
 }
 
 [HtmlTargetElement("notus-auth-navbar")]
-public class NotusAuthNavbarComponent : ServerComponent
+public class LandingHeroComponent : ServerComponent
 {
-    public NotusAuthNavbarComponent(IRazorRenderer razorRenderer) : base(razorRenderer)
+    public LandingHeroComponent(IRazorRenderer razorRenderer) : base(razorRenderer)
     {
     }
 
