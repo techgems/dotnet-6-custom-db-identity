@@ -13,11 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Dashboard\Footer\" />
-    <Folder Include="Views\Dashboard\Navbar\" />
-    <Folder Include="Views\Dashboard\Sidebar\" />
-    <Folder Include="Views\Landing\Team\" />
-    <Folder Include="Views\Landing\Services\" />
     <Folder Include="Views\Profile\Navbar\" />
     <Folder Include="Views\Profile\Footer\" />
   </ItemGroup>

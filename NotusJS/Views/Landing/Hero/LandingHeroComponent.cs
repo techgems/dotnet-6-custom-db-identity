@@ -18,9 +18,9 @@ public class LandingHeroModel : ServerComponentModel
 }
 
 [HtmlTargetElement("landing-hero")]
-public class LandingHeroComponent : ServerComponent
+public class LandingAgencyComponent : ServerComponent
 {
-    public LandingHeroComponent(IRazorRenderer razorRenderer) : base(razorRenderer)
+    public LandingAgencyComponent(IRazorRenderer razorRenderer) : base(razorRenderer)
     {
     }
 
