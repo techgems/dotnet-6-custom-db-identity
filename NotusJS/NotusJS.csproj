@@ -12,11 +12,6 @@
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\Profile\Navbar\" />
-    <Folder Include="Views\Profile\Footer\" />
-  </ItemGroup>
-
 
 
 </Project>

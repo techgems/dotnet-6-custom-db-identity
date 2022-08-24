@@ -6,16 +6,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NotusJS.Views.Dashboard.Sidebar;
+namespace NotusJS.Views.Profile.Navbar;
 
-public class DashboardSidebarModel : ServerComponentModel
+public class ProfileNavbarModel : ServerComponentModel
 {
 }
 
-[HtmlTargetElement("dashboard-sidebar")]
-public class ProfileFooterComponent : ServerComponent
+[HtmlTargetElement("profile-navbar")]
+public class ProfileNavbarComponent : ServerComponent
 {
-    public ProfileFooterComponent(IRazorRenderer razorRenderer) : base(razorRenderer)
+    public ProfileNavbarComponent(IRazorRenderer razorRenderer) : base(razorRenderer)
     {
     }
 
@@ -24,11 +24,11 @@ public class ProfileFooterComponent : ServerComponent
 
     public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
     {
-        var model = new DashboardSidebarModel()
+        var model = new ProfileNavbarModel()
         {
 
         };
 
-        await RenderPartialView("~/Views/Dashboard/Sidebar/Sidebar.cshtml", output, model);
+        await RenderPartialView("~/Views/Profile/Navbar/Navbar.cshtml", output, model);
     }
 }

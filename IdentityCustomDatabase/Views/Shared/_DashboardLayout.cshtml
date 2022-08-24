@@ -13,9 +13,10 @@
 <body class="text-slate-700 antialiased">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root">
+        <dashboard-sidebar></dashboard-sidebar>
         <vc:notus-dashboard-sidebar></vc:notus-dashboard-sidebar>
         <div class="relative md:ml-64 bg-slate-50">
-            <vc:notus-dashboard-header></vc:notus-dashboard-header>
+            <dashboard-navbar></dashboard-navbar>
             @RenderBody()
         </div>
     </div>
