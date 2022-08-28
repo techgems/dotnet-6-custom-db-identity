@@ -12,6 +12,6 @@ public static class NotusDependencyInjection
 {
     public static void AddNotusComponents(this IServiceCollection services)
     {
-        services.AddTransient<IRazorRenderer, RazorRenderer>();
+        services.AddScoped<IRazorRenderer, RazorRenderer>();
     }
 }

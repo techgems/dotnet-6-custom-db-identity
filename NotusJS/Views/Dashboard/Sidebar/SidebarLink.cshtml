@@ -1,1 +1,11 @@
 ﻿@using NotusJS.Views.Dashboard.Sidebar;
+@model DashboardSidebarLinkModel
+
+<li class="inline-flex">
+    <a href="@Model.Link"
+       target="_blank"
+       class="text-slate-700 hover:text-slate-500 text-sm block mb-4 no-underline font-semibold">
+        <i class="@Model.FabIconClass mr-2 text-slate-300 text-base"></i>
+        @Model.Text
+    </a>
+</li>

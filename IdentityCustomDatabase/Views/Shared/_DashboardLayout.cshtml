@@ -13,8 +13,48 @@
 <body class="text-slate-700 antialiased">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root">
-        <dashboard-sidebar></dashboard-sidebar>
-        <vc:notus-dashboard-sidebar></vc:notus-dashboard-sidebar>
+        <dashboard-sidebar>
+            <dashboard-sidebar-section text="Admin Layout Pages">
+                <dashboard-sidebar-link text="Dashboard"
+                                        fab-icon-class="fas fa-tv"
+                                        link="@Url.Action("Index", "Dashboard")">
+                </dashboard-sidebar-link>
+                <dashboard-sidebar-link text="Settings"
+                                        fab-icon-class="fas fa-tools"
+                                        link="@Url.Action("Index", "Dashboard")">
+                </dashboard-sidebar-link>
+                <dashboard-sidebar-link text="Tables"
+                                        fab-icon-class="fas fa-table"
+                                        link="@Url.Action("Index", "Dashboard")">
+                </dashboard-sidebar-link>
+            </dashboard-sidebar-section>
+
+            <dashboard-sidebar-section text="Auth Layout Pages">
+                <dashboard-sidebar-link text="Login"
+                                        fab-icon-class="fas fa-fingerprint"
+                                        link="@Url.Action("Login", "Auth")">
+                </dashboard-sidebar-link>
+                <dashboard-sidebar-link text="Register"
+                                        fab-icon-class="fas fa-clipboard-list"
+                                        link="@Url.Action("Register", "Auth")">
+                </dashboard-sidebar-link>
+            </dashboard-sidebar-section>
+
+            <dashboard-sidebar-section text="Documentation">
+                <dashboard-sidebar-link text="Styles"
+                                        fab-icon-class="fas fa-paint-brush"
+                                        link="https://www.creative-tim.com/learning-lab/tailwind/js/colors/notus">
+                </dashboard-sidebar-link>
+                <dashboard-sidebar-link text="CSS Components"
+                                        fab-icon-class="fab fa-css3-alt"
+                                        link="https://www.creative-tim.com/learning-lab/tailwind/js/alerts/notus">
+                </dashboard-sidebar-link>
+                <dashboard-sidebar-link text="Javascript"
+                                        fab-icon-class="fab fa-js-square"
+                                        link="https://www.creative-tim.com/learning-lab/tailwind/js/overview/notus">
+                </dashboard-sidebar-link>
+            </dashboard-sidebar-section>
+        </dashboard-sidebar>
         <div class="relative md:ml-64 bg-slate-50">
             <dashboard-navbar></dashboard-navbar>
             @RenderBody()

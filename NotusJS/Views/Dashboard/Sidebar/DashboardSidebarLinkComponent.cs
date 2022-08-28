@@ -10,6 +10,11 @@ namespace NotusJS.Views.Dashboard.Sidebar;
 
 public class DashboardSidebarLinkModel : ServerComponentModel
 {
+    public string? FabIconClass { get; set; }
+
+    public string Link { get; set; } = string.Empty;
+
+    public string Text { get; set; } = string.Empty;
 }
 
 [HtmlTargetElement("dashboard-sidebar-link")]
@@ -19,16 +24,24 @@ public class DashboardSidebarLinkComponent : ServerComponent
     {
     }
 
-    //[HtmlAttributeName("background")]
-    //public string BackgroundImageLink { get; set; } = string.Empty;
+    [HtmlAttributeName("fab-icon-class")]
+    public string? FabIconClass { get; set; }
+
+    [HtmlAttributeName("link")]
+    public string Link { get; set; } = string.Empty;
+
+    [HtmlAttributeName("text")]
+    public string Text { get; set; } = string.Empty;
 
     public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
     {
         var model = new DashboardSidebarLinkModel()
         {
-
+            Link = Link,
+            Text = Text,
+            FabIconClass = FabIconClass,
         };
 
-        await RenderPartialView("~/Views/Dashboard/Sidebar/Sidebar.cshtml", output, model);
+        await RenderPartialView("~/Views/Dashboard/Sidebar/SidebarLink.cshtml", output, model);
     }
 }
