@@ -1,17 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Razor.TagHelpers;
+using TechGems.RazorComponentTagHelpers;
 
 namespace CustomIdentity.Web.Components.TagHelpers.Dashboard;
 
 [HtmlTargetElement("sidebar")]
-public class SidebarTagHelper : ServerComponent
+public class SidebarTagHelper : RazorComponentTagHelper
 {
-    public SidebarTagHelper(IHtmlHelper htmlHelper) : base(htmlHelper)
+    public SidebarTagHelper() : base("~/Views/TagHelpers/Dashboard/Sidebar.cshtml")
     {
-    }
-
-    public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
-    {
-        await RenderPartialView("~/Views/TagHelpers/Dashboard/Sidebar.cshtml", output);
     }
 }
