@@ -1,26 +1,17 @@
 ﻿using Microsoft.AspNetCore.Razor.TagHelpers;
-using NotusJS.Components;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TechGems.RazorComponentTagHelpers;
 
 namespace NotusJS.Views.Auth.Navbar;
 
-public class AuthNavbarModel : ServerComponentModel
-{
-}
-
 [HtmlTargetElement("notus-auth-navbar")]
-public class LandingHeroComponent : ServerComponent
+public class AuthNavbarComponent : RazorComponentTagHelper
 {
-    public LandingHeroComponent(IRazorRenderer razorRenderer) : base(razorRenderer)
+    public AuthNavbarComponent() : base("~/Views/Auth/Navbar/AuthNavbar.cshtml")
     {
-    }
-
-    public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
-    {
-        await RenderPartialView("~/Views/Auth/Navbar/AuthNavbar.cshtml", output, new AuthNavbarModel());
     }
 }

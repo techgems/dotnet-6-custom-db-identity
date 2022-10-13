@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Razor.TagHelpers;
-using NotusJS.Components;
+using TechGems.RazorComponentTagHelpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,21 +8,10 @@ using System.Threading.Tasks;
 
 namespace NotusJS.Views.Dashboard.Sidebar;
 
-public class DashboardSidebarLinkModel : ServerComponentModel
-{
-    public string? FabIconClass { get; set; }
-
-    public string Link { get; set; } = string.Empty;
-
-    public string Text { get; set; } = string.Empty;
-
-    public bool OpenInNewTab { get; set; }
-}
-
 [HtmlTargetElement("dashboard-sidebar-link")]
-public class DashboardSidebarLinkComponent : ServerComponent
+public class DashboardSidebarLinkComponent : RazorComponentTagHelper
 {
-    public DashboardSidebarLinkComponent(IRazorRenderer razorRenderer) : base(razorRenderer)
+    public DashboardSidebarLinkComponent() : base("~/Views/Dashboard/Sidebar/SidebarLink.cshtml")
     {
     }
 
@@ -37,17 +26,4 @@ public class DashboardSidebarLinkComponent : ServerComponent
 
     [HtmlAttributeName("text")]
     public string Text { get; set; } = string.Empty;
-
-    public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
-    {
-        var model = new DashboardSidebarLinkModel()
-        {
-            Link = Link,
-            Text = Text,
-            FabIconClass = FabIconClass,
-            OpenInNewTab = OpenInNewTab
-        };
-
-        await RenderPartialView("~/Views/Dashboard/Sidebar/SidebarLink.cshtml", output, model);
-    }
 }

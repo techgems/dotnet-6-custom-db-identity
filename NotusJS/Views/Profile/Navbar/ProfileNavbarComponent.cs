@@ -1,34 +1,17 @@
-﻿using Microsoft.AspNetCore.Razor.TagHelpers;
-using NotusJS.Components;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TechGems.RazorComponentTagHelpers;
+using Microsoft.AspNetCore.Razor.TagHelpers;
 
 namespace NotusJS.Views.Profile.Navbar;
 
-public class ProfileNavbarModel : ServerComponentModel
-{
-}
-
 [HtmlTargetElement("profile-navbar")]
-public class ProfileNavbarComponent : ServerComponent
+public class ProfileNavbarComponent : RazorComponentTagHelper
 {
-    public ProfileNavbarComponent(IRazorRenderer razorRenderer) : base(razorRenderer)
+    public ProfileNavbarComponent() : base("~/Views/Profile/Navbar/Navbar.cshtml")
     {
-    }
-
-    //[HtmlAttributeName("background")]
-    //public string BackgroundImageLink { get; set; } = string.Empty;
-
-    public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
-    {
-        var model = new ProfileNavbarModel()
-        {
-
-        };
-
-        await RenderPartialView("~/Views/Profile/Navbar/Navbar.cshtml", output, model);
     }
 }

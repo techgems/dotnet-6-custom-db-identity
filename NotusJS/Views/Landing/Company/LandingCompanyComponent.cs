@@ -1,34 +1,17 @@
 ﻿using Microsoft.AspNetCore.Razor.TagHelpers;
-using NotusJS.Components;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TechGems.RazorComponentTagHelpers;
 
-namespace NotusJS.Views.Landing.Contact;
-
-public class LandingContactModel : ServerComponentModel
-{
-}
+namespace NotusJS.Views.Landing.Company;
 
 [HtmlTargetElement("landing-contact")]
-public class LandingContactComponent : ServerComponent
+public class LandingCompanyComponent : RazorComponentTagHelper
 {
-    public LandingContactComponent(IRazorRenderer razorRenderer) : base(razorRenderer)
+    public LandingCompanyComponent() : base("~/Views/Landing/Contact/Contact.cshtml")
     {
-    }
-
-    //[HtmlAttributeName("background")]
-    //public string BackgroundImageLink { get; set; } = string.Empty;
-
-    public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
-    {
-        var model = new LandingContactModel()
-        {
-
-        };
-
-        await RenderPartialView("~/Views/Landing/Contact/Contact.cshtml", output, model);
     }
 }

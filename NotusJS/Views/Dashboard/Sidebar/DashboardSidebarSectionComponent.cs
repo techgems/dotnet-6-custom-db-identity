@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Razor.TagHelpers;
-using NotusJS.Components;
+using TechGems.RazorComponentTagHelpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,28 +8,14 @@ using System.Threading.Tasks;
 
 namespace NotusJS.Views.Dashboard.Sidebar;
 
-public class DashboardSidebarSectionModel : ServerComponentModel
-{
-    public string Text { get; set; } = string.Empty;
-}
-
 [HtmlTargetElement("dashboard-sidebar-section")]
-public class DashboardSidebarSectionComponent : ServerComponent
+public class DashboardSidebarSectionComponent : RazorComponentTagHelper
 {
-    public DashboardSidebarSectionComponent(IRazorRenderer razorRenderer) : base(razorRenderer)
+    public DashboardSidebarSectionComponent() : base("~/Views/Dashboard/Sidebar/SidebarSection.cshtml")
     {
     }
 
     [HtmlAttributeName("text")]
     public string Text { get; set; } = string.Empty;
 
-    public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
-    {
-        var model = new DashboardSidebarSectionModel()
-        {
-            Text = Text,
-        };
-
-        await RenderPartialView("~/Views/Dashboard/Sidebar/SidebarSection.cshtml", output, model);
-    }
 }

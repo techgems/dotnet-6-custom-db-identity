@@ -2,7 +2,6 @@ using CustomIdentity.DataAccess.DI;
 using CustomIdentity.Web.Authentication;
 using CustomIdentity.Web.Services;
 using CustomIdentity.Web.Services.Interfaces;
-using NotusJS.DI;
 using Tailwind;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,7 +11,6 @@ builder.Services.AddMvc();
 builder.Services.AddDataAccess();
 builder.Services.AddCustomIdentityAuthentication();
 builder.Services.AddAuthorization();
-builder.Services.AddNotusComponents();
 
 builder.Services.AddTransient<IEmailService, EmailService>();
 

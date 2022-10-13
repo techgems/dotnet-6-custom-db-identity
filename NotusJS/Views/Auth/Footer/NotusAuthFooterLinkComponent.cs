@@ -1,38 +1,21 @@
 ﻿using Microsoft.AspNetCore.Razor.TagHelpers;
-using NotusJS.Components;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TechGems.RazorComponentTagHelpers;
 
 namespace NotusJS.Views.Auth.Footer;
 
-public class AuthFooterLinkModel : ServerComponentModel
-{
-    public string Link { get; set; } = string.Empty;
-
-}
-
 [HtmlTargetElement("notus-auth-footer-link")]
-public class NotusAuthFooterLinkComponent : ServerComponent
+public class NotusAuthFooterLinkComponent : RazorComponentTagHelper
 {
-    public NotusAuthFooterLinkComponent(IRazorRenderer razorRenderer) : base(razorRenderer)
+    public NotusAuthFooterLinkComponent() : base("~/Views/Auth/Footer/AuthFooterLink.cshtml")
     {
 
     }
-
 
     [HtmlAttributeName("link")]
     public string Link { get; set; } = "";
-
-    public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
-    {
-        var model = new AuthFooterLinkModel()
-        {
-            Link = Link
-        };
-
-        await RenderPartialView("~/Views/Auth/Footer/AuthFooterLink.cshtml", output, model);
-    }
 }

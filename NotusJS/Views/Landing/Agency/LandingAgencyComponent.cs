@@ -1,34 +1,17 @@
 ﻿using Microsoft.AspNetCore.Razor.TagHelpers;
-using NotusJS.Components;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TechGems.RazorComponentTagHelpers;
 
 namespace NotusJS.Views.Landing.Agency;
 
-public class LandingAgencyModel : ServerComponentModel
-{
-}
-
 [HtmlTargetElement("landing-agency")]
-public class LandingCompanyComponent : ServerComponent
+public class LandingCompanyComponent : RazorComponentTagHelper
 {
-    public LandingCompanyComponent(IRazorRenderer razorRenderer) : base(razorRenderer)
+    public LandingCompanyComponent() : base("~/Views/Landing/Agency/Agency.cshtml")
     {
-    }
-
-    //[HtmlAttributeName("background")]
-    //public string BackgroundImageLink { get; set; } = string.Empty;
-
-    public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
-    {
-        var model = new LandingAgencyModel()
-        {
-
-        };
-
-        await RenderPartialView("~/Views/Landing/Agency/Agency.cshtml", output, model);
     }
 }

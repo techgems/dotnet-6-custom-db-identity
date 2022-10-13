@@ -1,34 +1,18 @@
 ﻿using Microsoft.AspNetCore.Razor.TagHelpers;
-using NotusJS.Components;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TechGems.RazorComponentTagHelpers;
 
 namespace NotusJS.Views.Dashboard.Sidebar;
 
-public class DashboardSidebarModel : ServerComponentModel
-{
-}
-
 [HtmlTargetElement("dashboard-sidebar")]
-public class ProfileFooterComponent : ServerComponent
+public class DashboardSidebarComponent : RazorComponentTagHelper
 {
-    public ProfileFooterComponent(IRazorRenderer razorRenderer) : base(razorRenderer)
+    public DashboardSidebarComponent() : base("~/Views/Dashboard/Sidebar/Sidebar.cshtml")
     {
     }
 
-    //[HtmlAttributeName("background")]
-    //public string BackgroundImageLink { get; set; } = string.Empty;
-
-    public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
-    {
-        var model = new DashboardSidebarModel()
-        {
-
-        };
-
-        await RenderPartialView("~/Views/Dashboard/Sidebar/Sidebar.cshtml", output, model);
-    }
 }
