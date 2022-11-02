@@ -27,7 +27,7 @@
 
   <ItemGroup>
     <PackageReference Include="Tailwind.Extensions.AspNetCore" Version="1.0.0-beta3" />
-    <PackageReference Include="TechGems.RazorComponentTagHelpers" Version="1.0.1" />
+    <PackageReference Include="TechGems.RazorComponentTagHelpers" Version="1.1.0-beta" />
   </ItemGroup>
 
 </Project>
