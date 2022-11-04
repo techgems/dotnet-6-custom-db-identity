@@ -8,10 +8,10 @@ using TechGems.RazorComponentTagHelpers;
 
 namespace NotusJS.Views.Landing.Contact;
 
-[HtmlTargetElement("landing-company")]
+[HtmlTargetElement("landing-contact")]
 public class LandingContactComponent : RazorComponentTagHelper
 {
-    public LandingContactComponent() : base("~/Views/Landing/Company/Company.cshtml")
+    public LandingContactComponent() : base("~/Views/Landing/Contact/Contact.cshtml")
     {
     }
 }
